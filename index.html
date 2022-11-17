@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/keyframes.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+    <!-- Javascript -->
+    <script src="./javascript/index.js" defer></script>
+    <script src="./javascript/setAge.js" defer></script>
+    <script src="./javascript/setHobby.js" defer></script>
+    <script src="./javascript/setProfession.js" defer></script>
+    <script src="./javascript/setSoftwareEngineringTrack.js" defer></script>
+    <script src="./javascript/about.js" defer></script>
+
+
+    <title>Ghost Development</title>
+</head>
+<body class="locked">
+    <header id="header">
+        <div class="flex_row">
+            <h1>
+                <a href="/">
+                    <img src="./assets/ghost.svg" id="ghost" alt="ghost">
+                </a>
+            </h1>
+            <nav id="header_nav">
+                <ul>
+                    <li>
+                        <a href="">about</a>
+                    </li>
+                    <li>
+                        <a href="">portfolio</a>
+                    </li>
+                    <li>
+                        <a href="">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <article id="hero">
+            <img src="./assets/GH.svg" alt="GH">
+            <img src="./assets/ghost_beanie.svg" alt="Boo">
+            <img src="./assets/ST.svg" alt="ST">
+        </article>
+    </header>
+    <main>
+        <article id="about">
+            <h2>about</h2>
+            <section id="about_categories">
+                <div id="intro">
+                    <p>
+                        Boo! My name is Jeremy van Lonkhuizen and i am a developer. My passions are webdevelopment and personal development. At work, i am using webdevelopment to help people with autisme in their personal growth and improvement of their quality of life.                   
+                    </p>
+                    <p id="slogan">Balance is key</p>
+                </div>
+                <div class="category fadein">
+                    <h3>personal</h3>
+                    <div class="card invisible">
+                        <div class="flex_col">
+                            <h4>name</h4>
+                            <p>Jeremy Ghost</p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>age</h4>
+                            <p>
+                                <span id="year"></span>
+                                <span id="month"></span>
+                                <span id="day"></span>
+                            </p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>hobbies</h4>
+                            <p id="hobby"></p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>location</h4>
+                            <p>the Netherlands</p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>profession</h4>
+                            <p id="profession"></p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>work</h4>
+                            <a href="">Spectrum multimedia & IT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category fadein">
+                    <h3>skills</h3>
+                    <div class="card invisible">
+                        <div class="flex_col">
+                            <h4>basics</h4>
+                            <p>html:</p>
+                            <p>css:</p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>frontend</h4>
+                            <p>scss:</p>
+                            <p>javascript</p>
+                            <p>react:</p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>backend</h4>
+                            <p>mysql:</p>
+                            <p>php:</p>
+                            <p>laravel:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category fadein">
+                    <h3>studies</h3>
+                    <div class="card invisible">
+                        <div class="flex_col">
+                            <h4>IT essentials</h4>
+                            <p>Spectrum multimedia & IT</p>
+                            <p>25-05-2019</p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>professional scrum masyter 1</h4>
+                            <p>Scrum</p>
+                            <p>15-11-2019</p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>software enginering</h4>
+                            <p id="softwareEngineringTrack">
+                            </p>
+                            <p>18-12-2019</p>
+                        </div>
+                        <div class="flex_col">
+                            <h4>praktijkopleider plus</h4>
+                            <p>Marlijn academie</p>
+                            <p>15-10-2020</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+@keyframes ghost  {
+    0%   {
+        opacity: 0;
+        right: 100px;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes nav  {
+    0%   {
+        left: 200px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes left_tag{
+    0%   {
+        bottom: 100vh;
+        left: -100vw;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        left: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes ghost_beanie {
+    0%   {
+        opacity: 0;
+        transform: rotate(-360deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes right_tag{
+    0%   {
+        top: 100vh;
+        right: -100vw;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        right: 150px;
+        opacity: 1;
+    }
+}

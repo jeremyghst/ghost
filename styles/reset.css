@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.flex_row{
+    display: flex;
+    flex-direction: row;
+}
+
+html{
+    width: 100vw;
+}
+
+body{
+    background-image: url('./../assets/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+body.locked{
+    overflow: hidden;
+}

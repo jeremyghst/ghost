@@ -1,0 +1,18 @@
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 250px;
+}
+main article{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+main article h2{
+    color: #212254;
+    margin-bottom: 25px;
+}
+
+main article h3{
+    color: #212254;
+}
