@@ -34,57 +34,28 @@ function getDays(){
 }
 
 function setAge(){
-    let y = 0;
-    let m = 0;
-    let d= 0;
-
     const year_container = document.getElementById('year');
     const month_container = document.getElementById('month');
     const day_container = document.getElementById('day');
 
-    const year_timer = setInterval(function(){
-        year_container.innerText = `${y} years`;
+    year_container.innerText = `${getYears()} years`;
 
-        if(y === getYears()){
-            clearInterval(year_timer);
-        } else {
-            y++;
-        }
+    let month_text = 'months';
+    const m = getMonths();
+    
+    if(m === 1){
+        month_text = 'month';
+    }
 
-    }, (1000/getYears()));
+    month_container.innerText = `${m} ${month_text}`;
 
-    const month_timer = setInterval(function(){
-        let month_text = 'months';
 
-        if(m === 1){
-            month_text = 'month';
-        }
+    let day_text = 'days';
+    const d = getDays();
 
-        month_container.innerText = `${m} ${month_text}`;
+    if(d === 1){
+        day_text = 'day';
+    }
 
-        if(Math.abs(m) === getMonths()){
-            clearInterval(month_timer);
-        } else {
-            m++;
-        }
-
-    }, (1000/getMonths()));
-
-    const day_timer = setInterval(function(){
-
-        let day_text = 'days';
-
-        if(d === 1){
-            day_text = 'day';
-        }
-
-        day_container.innerText = `${d} ${day_text}`;
-
-        if(Math.abs(d) === getDays()){
-            clearInterval(day_timer);
-        } else {
-            d++;
-        }
-
-    }, (1000/getDays()));
+    day_container.innerText = `${d} ${day_text}`;
 }

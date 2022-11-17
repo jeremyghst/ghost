@@ -9,7 +9,6 @@ window.addEventListener('scroll', function() {
 
             if(!element.classList.contains('visible')){
                 element.classList.add('visible');
-                setAge();
             }
         })
 

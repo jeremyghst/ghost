@@ -4,12 +4,15 @@
     gap: 50px;
     align-items: flex-start;
     height: 600px;
+    overflow-y: hidden;
+    overflow-x: visible;
 }
 
+
 #intro{
-    width: 360px;
-    max-width: 360px;
-    min-width: 360px;
+    width: 320px;
+    max-width: 320px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -18,6 +21,22 @@
 
 #intro p{
     text-align: justify;
+}
+
+#balance{
+    height: 200px;
+    animation: balance 10s linear infinite;
+    margin: 75px auto 0;
+    position: relative;
+    bottom: -100vh;
+    left: -100vw;
+    transition: 1s;
+}
+
+#balance.visible{
+    bottom: 0;
+    left: 0;
+    transition: 1s;
 }
 
 .category{
@@ -36,15 +55,19 @@
 .category.selected{
     display: block;
     padding: 25px;
-    width: calc(100% - 300px);
-    max-width: calc(100% - 300px);
+    width: calc(100% - 320px);
+    max-width: calc(100% - 320px);
     max-height: 100%;
     transition: 0.5s;
     aspect-ratio: auto;
 }
 
-.category:hover{
+.category:not(.selected):hover{
     animation: shake 0.8s infinite;
+}
+
+.category.selected:hover{
+    animation: shake 0.8s 1;
 }
 
 .category .card{
@@ -52,16 +75,27 @@
     flex-direction: column;
     gap: 25px;
     margin-top: 25px;
+    opacity: 1;
+    transition: 2s;
 }
 
 .category .card.invisible{
-    display: none;
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .category .card .flex_col{
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.flex_col .study_date{
+    font-size: 14px;
+}
+
+.category h4{
+    font-size: 18px;
 }
 
 .category .card a{
@@ -85,7 +119,7 @@
     bottom: -100vh;
 }
 
-.category:nth-child(4) h4{
+.category:nth-child(3) h4{
     color: #5F4B95;
 }
 
@@ -106,3 +140,23 @@
     transition: 1s;
 }
 
+.flex_skill{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex_skill .progressbar{
+    width: 180px;
+    background: #5F4B95;
+    height: 18px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.flex_skill .progressbar .progress{
+    height: 100%;
+    border-radius: 3px;
+    background-color: #BFCFFA;
+    width: 0%;
+}

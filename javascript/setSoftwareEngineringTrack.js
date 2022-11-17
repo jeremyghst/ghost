@@ -17,5 +17,5 @@ function setSoftwareEngineringTrack(){
         } else {
             i++
         }
-    }, 1000);
+    }, 2000);
 }

@@ -3,7 +3,7 @@ let hobby_timer;
 
 function setHobby(){
     const hobby_container = document.getElementById('hobby');
-    const hobby_array = ['skateboarden', 'tattoos', 'coding', 'biking'];
+    const hobby_array = ['skateboarding', 'tattoos', 'coding', 'biking'];
 
     hobby_container.innerText = hobby_array[0];
 
@@ -17,5 +17,5 @@ function setHobby(){
         } else {
             i++
         }
-    }, 1000);
+    }, 2000);
 }

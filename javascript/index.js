@@ -7,7 +7,9 @@ window.addEventListener("load", (event) => {
     setProfession();
     setHobby();
     setSoftwareEngineringTrack();
-
+    setAge();
+    setSkills();
+    
     setTimeout(() => {
         document.body.classList.remove('locked');
     }, 1000)

@@ -3,7 +3,7 @@ let profession_timer;
 
 function setProfession(){
     const profession_container = document.getElementById('profession');
-    const profession_array = ['webdeveloper', 'autisme peer coach', 'trainer']
+    const profession_array = ['web developer', 'autisme peer coach', 'trainer']
 
     profession_container.innerText = profession_array[0];
 
@@ -17,5 +17,5 @@ function setProfession(){
         } else {
             i++
         }
-    }, 1000);
+    }, 2000);
 }
