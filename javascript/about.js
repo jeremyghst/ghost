@@ -25,11 +25,17 @@ window.addEventListener('scroll', function() {
 
 const categories = Array.from(document.getElementsByClassName('category'));
 categories.forEach(cat => {
-    cat.addEventListener('click', (e) => selectCategory(e))
+    cat.addEventListener('click', (e) => {
+        const target = e.target.closest('.category')
+        if(!target.classList.contains('selected')){
+            selectCategory(target)
+        } else {
+            closeCategory(target);
+        }
+    })
 });
 
-function selectCategory(e){
-    const target = e.target.closest('.category');
+function selectCategory(target){
 
     const selected_cat = Array.from(document.getElementsByClassName('selected'));
     selected_cat.forEach(cat => {
@@ -39,4 +45,9 @@ function selectCategory(e){
 
     target.classList.add('selected');
     target.getElementsByClassName('card')[0].classList.remove('invisible');
+}
+
+function closeCategory(target){
+    target.classList.remove('selected');
+    target.getElementsByClassName('card')[0].classList.add('invisible');
 }
