@@ -64,7 +64,7 @@
     <main>
         <article id="about">
             <h2>about</h2>
-            <section id="about_categories">
+            <section id="about_container">
                 <div id="intro">
                     <p>
                         Boo! My name is Jeremy van Lonkhuizen and i am a developer. My passions are web development and personal development. At work, i am using web development to help people with autisme in their personal growth and improvement of their quality of life.                   
@@ -73,127 +73,130 @@
                     <img src="./assets/balance.svg" class="fadein" id="balance" alt="balance">
                 </div>
                 
-                <div class="category fadein">
-                    <h3>personal</h3>
-                    <div class="card invisible">
-                        <div class="flex_col">
-                            <h4>name</h4>
-                            <p>Jeremy Ghost</p>
-                        </div>
-                        <div class="flex_col">
-                            <h4>age</h4>
-                            <p>
-                                <span id="year"></span>
-                                <span id="month"></span>
-                                <span id="day"></span>
-                            </p>
-                        </div>
-                        <div class="flex_col">
-                            <h4>hobbies</h4>
-                            <p id="hobby"></p>
-                        </div>
-                        <div class="flex_col">
-                            <h4>location</h4>
-                            <p>the Netherlands</p>
-                        </div>
-                        <div class="flex_col">
-                            <h4>profession</h4>
-                            <p id="profession"></p>
-                        </div>
-                        <div class="flex_col">
-                            <h4>work</h4>
-                            <a href="">Spectrum multimedia & IT</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="category fadein">
-                    <h3>skills</h3>
-                    <div class="card invisible">
-                        <div class="flex_col">
-                            <h4>basics</h4>
-                            <div class="flex_skill">
-                                <p>html:</p>
-                                <div class="progressbar">
-                                    <div class="progress" id="html"></div>
-                                </div>
+                <div id="about_categories">
+                    <div class="category fadein">
+                        <h3>personal</h3>
+                        <div class="card invisible">
+                            <div class="flex_col">
+                                <h4>name</h4>
+                                <p>Jeremy Ghost</p>
                             </div>
-                            <div class="flex_skill">
-                                <p>css:</p>
-                                <div class="progressbar">
-                                    <div class="progress" id="css"></div>
-                                </div>
+                            <div class="flex_col">
+                                <h4>age</h4>
+                                <p>
+                                    <span id="year"></span>
+                                    <span id="month"></span>
+                                    <span id="day"></span>
+                                </p>
                             </div>
-                        </div>
-                        <div class="flex_col">
-                            <h4>frontend</h4>
-                            <div class="flex_skill">
-                                <p>scss:</p>
-                                <div class="progressbar">
-                                    <div class="progress" id="scss"></div>
-                                </div>
+                            <div class="flex_col">
+                                <h4>hobbies</h4>
+                                <p id="hobby"></p>
                             </div>
-                            <div class="flex_skill">
-                                <p>javascript:</p>
-                                <div class="progressbar">
-                                    <div class="progress" id="javascript"></div>
-                                </div>
+                            <div class="flex_col">
+                                <h4>location</h4>
+                                <p>the Netherlands</p>
                             </div>
-                            <div class="flex_skill">
-                                <p>reactjs:</p>
-                                <div class="progressbar">
-                                    <div class="progress" id="reactjs"></div>
-                                </div>
+                            <div class="flex_col">
+                                <h4>profession</h4>
+                                <p id="profession"></p>
                             </div>
-                        </div>
-                        <div class="flex_col">
-                            <h4>backend</h4>
-                            <div class="flex_skill">
-                                <p>mysql:</p>
-                                <div class="progressbar">
-                                    <div class="progress" id="mysql"></div>
-                                </div>
-                            </div>
-                            <div class="flex_skill">
-                                <p>php:</p>
-                                <div class="progressbar">
-                                    <div class="progress" id="php"></div>
-                                </div>
-                            </div>
-                            <div class="flex_skill">
-                                <p>laravel:</p>
-                                <div class="progressbar">
-                                    <div class="progress" id="laravel"></div>
-                                </div>
+                            <div class="flex_col">
+                                <h4>work</h4>
+                                <a href="">Spectrum multimedia & IT</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="category fadein">
-                    <h3>studies</h3>
-                    <div class="card invisible">
-                        <div class="flex_col">
-                            <h4>IT essentials</h4>
-                            <p>Spectrum multimedia & IT</p>
-                            <p class="study_date">25-05-2019</p>
+                    <div class="category fadein">
+                        <h3>skills</h3>
+                        <div class="card invisible">
+                            <div class="flex_col">
+                                <h4>basics</h4>
+                                <div class="flex_skill">
+                                    <p>html:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="html"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>css:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="css"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_col">
+                                <h4>frontend</h4>
+                                <div class="flex_skill">
+                                    <p>scss:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="scss"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>javascript:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="javascript"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>reactjs:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="reactjs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_col">
+                                <h4>backend</h4>
+                                <div class="flex_skill">
+                                    <p>mysql:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="mysql"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>php:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="php"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>laravel:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="laravel"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex_col">
-                            <h4>professional scrum master 1</h4>
-                            <p>Scrum</p>
-                            <p class="study_date">15-11-2019</p>
-                        </div>
-                        <div class="flex_col">
-                            <h4>software enginering</h4>
-                            <p id="softwareEngineringTrack">
-                            </p>
-                            <p class="study_date">18-12-2019</p>
-                        </div>
-                        <div class="flex_col">
-                            <h4>praktijkopleider plus</h4>
-                            <p>Marlijn academie</p>
-                            <p class="study_date">15-10-2020</p>
+                    </div>
+                    <div class="category fadein">
+                        <h3>studies</h3>
+                        <div class="card invisible">
+                            <div class="flex_col">
+                                <h4>IT essentials</h4>
+                                <p>Spectrum multimedia & IT</p>
+                                <p class="study_date">25-05-2019</p>
+                            </div>
+                            <div class="flex_col">
+                                <h4>professional scrum master 1</h4>
+                                <p>Scrum</p>
+                                <p class="study_date">15-11-2019</p>
+                            </div>
+                            <div class="flex_col">
+                                <h4>software enginering</h4>
+                                <p id="softwareEngineringTrack">
+                                </p>
+                                <p class="study_date">18-12-2019</p>
+                            </div>
+                            <div class="flex_col">
+                                <h4>praktijkopleider plus</h4>
+                                <p>Marlijn academie</p>
+                                <p class="study_date">15-10-2020</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </section>
         </article>
     </main>

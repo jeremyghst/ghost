@@ -1,5 +1,5 @@
 window.addEventListener('scroll', function() {
-    const container = document.getElementById('about_categories')
+    const container = document.getElementById('about_container')
 	const elements = Array.from(container.getElementsByClassName('fadein'));
     const position = container.getBoundingClientRect();
 
