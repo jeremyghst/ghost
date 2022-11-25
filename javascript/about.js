@@ -41,8 +41,9 @@ function selectCategory(target){
         cat.classList.remove('selected');
         cat.getElementsByClassName('card')[0].classList.add('invisible');
     })
-
+    
     target.classList.add('selected');
+    target.classList.remove('deselected');
     target.getElementsByClassName('card')[0].classList.remove('invisible');
 }
 
@@ -50,3 +51,4 @@ function closeCategory(target){
     target.classList.remove('selected');
     target.getElementsByClassName('card')[0].classList.add('invisible');
 }
+
