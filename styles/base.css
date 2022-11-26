@@ -7,7 +7,7 @@ html{
 }
 
 body{
-    background-image: url('./../assets/background.png');
+    background-image: linear-gradient(to bottom, #266B63, #3BA99C);
     background-size: contain;
     background-attachment: fixed;
     background-position: center;
