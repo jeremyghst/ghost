@@ -34,21 +34,43 @@ categories.forEach(cat => {
     })
 });
 
-function selectCategory(target){
+function selectCategory(target){    
+    const container = document.getElementById('about_categories');
 
-    const selected_cat = Array.from(document.getElementsByClassName('selected'));
-    selected_cat.forEach(cat => {
-        cat.classList.remove('selected');
-        cat.getElementsByClassName('card')[0].classList.add('invisible');
+    const categories = Array.from(document.getElementsByClassName('category'));
+    categories.forEach(cat => {
+        if(cat.classList.contains('selected')){
+            cat.classList.remove('selected');
+            cat.getElementsByClassName('card')[0].classList.add('invisible');    
+        }
+
+        if(cat.classList.contains('deselected')){
+            cat.classList.remove('deselected');
+        }
+
+        if(cat === target){
+            cat.classList.add('selected');
+            cat.getElementsByClassName('card')[0].classList.remove('invisible');
+        } else {
+            cat.classList.add('deselected');
+        }
+
+        container.classList.add('selected');
     })
-    
-    target.classList.add('selected');
-    target.classList.remove('deselected');
-    target.getElementsByClassName('card')[0].classList.remove('invisible');
+
 }
 
 function closeCategory(target){
+    const container = document.getElementById('about_categories');
+
     target.classList.remove('selected');
     target.getElementsByClassName('card')[0].classList.add('invisible');
-}
+
+    const deselected_categories = Array.from(document.getElementsByClassName('deselected'));
+    deselected_categories.forEach(cat => {
+        cat.classList.remove('deselected');
+    })
+
+    container.classList.remove('selected');
+} 
 

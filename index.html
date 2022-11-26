@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/hero.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/keyframes.css">
 
     <!-- Fonts -->
@@ -21,6 +23,7 @@
 
     <!-- Javascript -->
     <script src="./javascript/index.js" defer></script>
+    <script src="./javascript/setYear.js" defer></script>
     <script src="./javascript/setAge.js" defer></script>
     <script src="./javascript/setHobby.js" defer></script>
     <script src="./javascript/setProfession.js" defer></script>
@@ -45,9 +48,6 @@
                         <a href="">about</a>
                     </li>
                     <li>
-                        <a href="">portfolio</a>
-                    </li>
-                    <li>
                         <a href="">
                             <img src="./assets/instagram.svg" salt="">
                         </a>
@@ -56,9 +56,11 @@
             </nav>
         </div>
         <article id="hero">
-            <img src="./assets/GH.svg" alt="GH">
-            <img src="./assets/ghost_beanie.svg" alt="Boo">
-            <img src="./assets/ST.svg" alt="ST">
+            <div id="hero_animation">
+                <img src="./assets/GH.svg" alt="GH" id="gh">
+                <img src="./assets/ghost_beanie.svg" alt="Boo" id="boo">
+                <img src="./assets/ST.svg" alt="ST" id="st"> 
+            </div>
         </article>
     </header>
     <main>
@@ -203,5 +205,10 @@
             </section>
         </article>
     </main>
+    <footer id="footer">
+        <p>&copy; copyright</p>
+        <img src="./assets/tag.png" alt="tag" id="tag">
+        <p id="copyrightYear"></p>
+    </footer>
 </body>
 </html>

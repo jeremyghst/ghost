@@ -4,12 +4,11 @@
     justify-content: flex-start;
     gap: 50px;
     align-items: flex-start;
-    min-height: 600px;
-    height: 600px;
-    max-height: 600px;
+
     min-width: 100%;
     width: 100%;
     max-width: 100%;
+    padding-bottom: 25px;
 }
 
 #about_categories{
@@ -17,10 +16,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 50px;
-    
-    min-height: 600px;
-    height: 600px;
-    max-height: 600px;
+    transition: 1s;
 
     min-width: calc(100% - 370px);
     width: calc(100% - 370px);
@@ -33,7 +29,6 @@
 #intro{
     width: 320px;
     max-width: 320px;
-    min-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -47,6 +42,7 @@
 }
 
 #intro p{
+    font-size: 18px;
     text-align: justify;
 }
 
@@ -58,9 +54,11 @@
     bottom: -100vh;
     left: -100vw;
     transition: 1s;
+    opacity: 0;
 }
 
 #balance.visible{
+    opacity: 1;
     bottom: 0;
     left: 0;
     transition: 1s;
@@ -71,24 +69,39 @@
     border-radius: 10px;
     transition: 1s;
     color: #212254;
-    width: 200px;
-    max-height: 200px;
+
+    width: 150px;
+    max-width: 360px;
+
+    max-height: 150px;
+    
+    aspect-ratio: 1/1;
+        
     overflow: hidden;
     transition: 1s;
-    aspect-ratio: 1/1;
-    padding: 10px;
+    padding: 25px 25px 50px;
 }
+
 
 .category.selected{
     display: block;
-    padding: 25px 25px 50px;
-
     width: 100%;
-    max-width: 100%;
-    
-    max-height: 100%;
-    transition: 0.5s;
+    max-width: 360px;
+
+    transition: 1s;
     aspect-ratio: auto;
+}
+
+.category:nth-child(1).selected{
+    max-height: 524px;
+}
+
+.category:nth-child(2).selected{
+    max-height: 431px;
+}
+
+.category:nth-child(3).selected{
+    max-height: 470px;
 }
 
 .category:not(.selected):hover{
@@ -105,12 +118,12 @@
     gap: 25px;
     margin-top: 25px;
     opacity: 1;
-    transition: 2s;
+    transition: 1s;
 }
 
 .category .card.invisible{
     opacity: 0;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .category .card .flex_col{
@@ -175,8 +188,14 @@
     justify-content: space-between;
 }
 
+.flex_skill p{
+    min-width: 90px;
+    width: 90px;
+    max-width: 90px;
+}
+
 .flex_skill .progressbar{
-    width: 180px;
+    width: 100%;
     background: #5F4B95;
     height: 18px;
     border-radius: 5px;
@@ -219,11 +238,7 @@
     }
 }
 
-@media all and (max-width: 750px) {
-    body{
-        padding: 0 25px;
-    }
-    
+@media all and (max-width: 650px) {
     #intro{
         width: 100%;
         max-width: 100%;
@@ -234,14 +249,9 @@
         margin: 25px auto 0;
     }
 
-    #about_container{
-        height: auto;
-        max-height: unset;
-    }
     #about_categories{
         gap: 25px;
-        height: auto;
-        max-height: unset;
+        justify-content: space-between;
     }
 
     .category{
@@ -250,8 +260,24 @@
 
     .category.selected{
         flex-shrink: 0;
-        width: 100%;
-        order: -1;
     }
 }
 
+@media all and (max-width: 570px){
+    #about_categories.selected{
+        gap: 0;
+        transition: 1s;
+    }
+
+    .category.selected{
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .category.deselected{
+        padding: 0;
+        width: 0%;
+        height: 0%;
+    }
+}

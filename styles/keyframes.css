@@ -51,7 +51,7 @@
     }
     100% {
         bottom: 0;
-        left: 50px;
+        left: 5%;
         opacity: 1;
     }
 }
@@ -76,7 +76,7 @@
     }
     100% {
         top: 0;
-        right: 150px;
+        right: 15%;
         opacity: 1;
     }
 }
