@@ -56,12 +56,6 @@ function selectCategory(target){
         }
 
         container.classList.add('selected');
-        
-        container_position = container.getBoundingClientRect().top - 25;
-        window.scrollTo({
-            top: container_position,
-            behavior: 'smooth'
-        })
     })
 
 }
