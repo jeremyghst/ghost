@@ -247,6 +247,7 @@
 
     #balance{
         margin: 25px auto 0;
+        max-width: 50%;
     }
 
     #about_categories{
