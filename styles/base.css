@@ -15,8 +15,8 @@ body{
 
     height: 100%;
 
-    position: fixed;
-    background: green;
+    position: absolute;
+    background: orange;
     
     padding: 0 25px;
 }
