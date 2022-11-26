@@ -6,7 +6,6 @@ html{
 }
 
 body{
-    background-image: linear-gradient(to bottom, #266B63, #3BA99C);
     background-size: 100vw 100vh;
     background-attachment: fixed;
     background-position: center;

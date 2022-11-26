@@ -46,6 +46,12 @@
     text-align: justify;
 }
 
+#intro #slogan{
+    font-weight: bold;
+    color: #266B63;
+    font-size: 30px;
+}
+
 #balance{
     height: 200px;
     animation: balance 10s linear infinite;

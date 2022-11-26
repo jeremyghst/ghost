@@ -9,8 +9,30 @@ window.addEventListener("load", (event) => {
     setSoftwareEngineringTrack();
     setAge();
     setSkills();
-    
+
     setTimeout(() => {
         document.body.classList.remove('locked');
-    }, 1000)
+    }, 1000);
 });
+
+window.addEventListener('wheel', (e) => {
+    onMove(e);
+})
+
+window.addEventListener('scroll', (e) => {
+    onMove(e);
+})
+
+function onMove(e){
+    const header = document.getElementById('header');
+    const hero = document.getElementById('hero');
+
+    console.log(window.pageYOffset)
+    if(window.pageYOffset > 100){
+        hero.classList.add('min');
+        header.classList.add('min');
+    } else {
+        hero.classList.remove('min');
+        header.classList.remove('min');
+    }
+}
