@@ -50,13 +50,14 @@ function selectCategory(target){
 
         if(cat === target){
             cat.classList.add('selected');
-            cat.getElementsByClassName('card')[0].classList.remove('invisible');
+            cat.getElementsByClassName('card')[0].classList.remove('invisible');            
         } else {
             cat.classList.add('deselected');
         }
 
         container.classList.add('selected');
-        container_position = container.offsetTop - 25;
+        
+        container_position = container.getBoundingClientRect().top - 25;
         window.scrollTo({
             top: container_position,
             behavior: 'smooth'
