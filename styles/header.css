@@ -38,13 +38,15 @@
     gap: 10px;
 }
 
-#header_nav li a{
+#header_nav li button{
     display: block;
+    border: none;
+    background: transparent;
     padding: 5px 10px;
     color: #212254;
     font-size: 18px;
 }
 
-#header_nav li a:hover{
+#header_nav li button:hover{
     animation: shake 0.8s infinite;
 }
