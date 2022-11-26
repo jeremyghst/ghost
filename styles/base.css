@@ -8,16 +8,13 @@ html{
 }
 
 body{
-    background-image: linear-gradient(to bottom, #266B63, #3BA99C);
+    /* background: linear-gradient(to bottom, #266B63, #3BA99C); */
+    background-color: #3BA99C;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
     width: 100%;
-
-    height: 100%;
-
-    position: absolute;
-    
+    height: 100%;    
     padding: 0 25px;
 }
 
