@@ -9,7 +9,7 @@ navBtns.forEach(btn => {
 function navigate(e){
     const btn = e.target.closest('.navBtn');
     const target = document.getElementById(btn.dataset.target);
-    const target_position = target.offsetTop;
+    const target_position = target.offsetTop - 25;
     
     window.scrollTo({
         top: target_position,
