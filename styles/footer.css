@@ -10,3 +10,11 @@
 #footer #tag{
     height: 25px;
 }
+
+#footer p{
+    width: 100%;
+}
+
+#footer p:first-child{
+    text-align: end; 
+}
