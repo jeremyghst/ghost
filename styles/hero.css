@@ -5,12 +5,12 @@
     justify-content: center;
     min-height: calc(100vh - 70px);
     max-height: calc(100vh - 70px);
-    transition: 1s;
+    transition: 0.5s;
     padding: 0 0 150px;
 }
 #hero.min{
     min-height: 0px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #hero_animation{

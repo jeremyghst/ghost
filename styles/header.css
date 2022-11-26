@@ -3,12 +3,12 @@
     min-height: 100vh;
     max-height: 100vh;
     padding-top: 25px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #header.min{
     min-height: 0;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 
