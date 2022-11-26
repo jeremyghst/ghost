@@ -28,7 +28,7 @@ function onMove(e){
     const hero = document.getElementById('hero');
 
     console.log(window.pageYOffset)
-    if(window.pageYOffset > 100){
+    if(window.pageYOffset > 45){
         hero.classList.add('min');
         header.classList.add('min');
     } else {
