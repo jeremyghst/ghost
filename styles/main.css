@@ -17,6 +17,8 @@ main article h2{
 
 main article h3{
     color: #212254;
-    text-overflow: ellipsis; 
-    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }

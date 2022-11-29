@@ -138,6 +138,10 @@
     gap: 5px;
 }
 
+.category .about_icon{
+    height: 25px;
+    max-width: 100%;
+}
 .flex_col .study_date{
     font-size: 14px;
 }
