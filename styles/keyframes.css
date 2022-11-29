@@ -9,9 +9,9 @@
     }
 }
 
-@keyframes nav  {
+@keyframes insta  {
     0%   {
-        left: 200px;
+        left: 100px;
         opacity: 0;
     }
     100% {
