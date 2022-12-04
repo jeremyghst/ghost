@@ -138,10 +138,18 @@
     gap: 5px;
 }
 
+
 .category .about_icon{
-    height: 25px;
+    height: 100px;
     max-width: 100%;
+    transition: 1s;
 }
+
+.category.selected .about_icon{
+    height: 30px;
+    transition: 1s;
+}
+
 .flex_col .study_date{
     font-size: 14px;
 }
