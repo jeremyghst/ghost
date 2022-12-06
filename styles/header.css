@@ -40,15 +40,15 @@
     justify-content: space-between;
 }
 
-#header_nav li button{
+#header_nav li:last-child{
     position: relative;
-    display: block;
     border: none;
-    background: transparent;
-    padding: 5px 10px;
-    color: #212254;
-    font-size: 18px;
     animation: insta 1s 1 ease-out;
+}
+
+#header_nav li button{
+    background: transparent;
+    border: none;
 }
 
 #header_nav li button:hover{

@@ -27,7 +27,6 @@ function onMove(e){
     const header = document.getElementById('header');
     const hero = document.getElementById('hero');
 
-    console.log(window.pageYOffset)
     if(window.pageYOffset > 90){
         hero.classList.add('min');
         header.classList.add('min');
