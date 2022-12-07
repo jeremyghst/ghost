@@ -110,7 +110,7 @@
 }
 
 .category:nth-child(3).selected{
-    max-height: 470px;
+    max-height: 402px;
 }
 
 .category:not(.selected):hover{

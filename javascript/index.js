@@ -6,7 +6,6 @@ window.addEventListener("load", (event) => {
 
     setProfession();
     setHobby();
-    setSoftwareEngineringTrack();
     setAge();
     setSkills();
 
