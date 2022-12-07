@@ -170,9 +170,6 @@
 .category:nth-child(1){
     left: -100vw;
     opacity: 0;
-}
-
-.category:nth-child(1).selected{
     background-color: #DB5957;
 }
 
@@ -188,9 +185,6 @@
 .category:nth-child(2){
     opacity: 0;
     bottom: -100vh;
-}
-
-.category:nth-child(2).selected{
     background-color: #8E7DBE;
 }
 
@@ -209,9 +203,6 @@
 .category:nth-child(3){
     left: 100vw;
     opacity: 0;
-}
-
-.category:nth-child(3).selected{
     background-color: #FCDC4D;
 }
 
