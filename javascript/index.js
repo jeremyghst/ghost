@@ -1,6 +1,6 @@
 "use strict"
 
-window.addEventListener("load", (event) => {
+window.addEventListener("load", () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 
@@ -14,11 +14,10 @@ window.addEventListener("load", (event) => {
     }, 1000);
 });
 
+window.addEventListener('scroll', onMove)
 window.addEventListener('wheel', onMove);
 
-window.addEventListener('scroll', onMove)
-
-function onMove(e){
+function onMove(){
     const header = document.getElementById('header');
     const hero = document.getElementById('hero');
 
