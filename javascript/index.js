@@ -25,7 +25,7 @@ window.addEventListener('scroll', (e) => {
 function onMove(e){
     const header = document.getElementById('header');
     const hero = document.getElementById('hero');
-
+    alert(window.pageYOffset);
     if(window.pageYOffset > 90){
         if(!hero.classList.contains('min')){
             hero.classList.add('min');
