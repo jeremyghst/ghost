@@ -27,12 +27,20 @@ function onMove(e){
     const hero = document.getElementById('hero');
 
     if(window.pageYOffset > 90){
-        hero.classList.add('min');
-        header.classList.add('min');
+        if(!hero.classList.contains('min')){
+            hero.classList.add('min');
+        }
+        if(!header.classList.contains('min')){
+            header.classList.add('min');
+        }
         fade('in');
     } else {
-        hero.classList.remove('min');
-        header.classList.remove('min');
+        if(hero.classList.contains('min')){
+            hero.classList.remove('min');
+        }
+        if(header.classList.contains('min')){
+            header.classList.remove('min');
+        }
         fade('out');
     }
 }
