@@ -2,6 +2,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 250px;
+    overflow: hidden;
 }
 main article{
     width: 1000px;
