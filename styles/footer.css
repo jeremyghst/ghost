@@ -1,0 +1,21 @@
+#footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 150px 0 25px;
+}
+
+#footer #tag{
+    height: 25px;
+}
+
+#footer p{
+    width: 100%;
+    color: #266B63;
+}
+
+#footer p:first-child{
+    text-align: end; 
+}

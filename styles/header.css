@@ -1,0 +1,13 @@
+#header{
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    transition: 1s;
+    padding: 25px 25px 0;
+}
+
+#header.min{
+    min-height: 0;
+    transition: 1s;
+}
+

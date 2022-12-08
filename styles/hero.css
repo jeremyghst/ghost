@@ -1,0 +1,47 @@
+#hero{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 70px);
+    max-height: calc(100vh - 70px);
+    transition: 1s;
+    padding: 0 0 150px;
+}
+
+#hero.min{
+    min-height: 0px;
+    transition: 1s;
+}
+
+#hero_animation{
+    width: 1000px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+}
+#hero img{
+    position: relative;
+}
+
+#gh{
+    animation: left_tag 1s 1 ease-in;
+    max-width: 30%;
+    left: 5%;
+    z-index: -1;
+}
+
+#boo{
+    animation: ghost_beanie 1s 1 ease-in;
+    max-width: 50%;
+}
+
+#st{
+    animation: right_tag 1s 1 ease-in;
+    max-width: 30%;
+    right: 15%;
+    z-index: 1;
+}

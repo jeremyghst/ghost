@@ -1,0 +1,38 @@
+.flex_skill{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex_skill p{
+    min-width: 120px;
+    width: 120px;
+    max-width: 120px;
+}
+
+.flex_skill .progressbar{
+    width: 100%;
+    height: 18px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.web .progressbar{
+    background: #5F4B95;
+}
+.personal .progressbar{
+    background: #C9A503;
+}
+
+.flex_skill .progressbar .progress{
+    height: 100%;
+    border-radius: 3px;
+    width: 0%;
+}
+
+.web .progress{
+    background: #C4BBDD;
+}
+.personal .progress{
+    background: #FEEFAF;
+}
