@@ -14,18 +14,14 @@ window.addEventListener("load", (event) => {
     }, 1000);
 });
 
-window.addEventListener('wheel', (e) => {
-    onMove(e);
-})
+window.addEventListener('wheel', onMove);
 
-window.addEventListener('scroll', (e) => {
-    onMove(e);
-})
+window.addEventListener('scroll', onMove)
 
 function onMove(e){
     const header = document.getElementById('header');
     const hero = document.getElementById('hero');
-    alert(window.pageYOffset);
+
     if(window.pageYOffset > 90){
         if(!hero.classList.contains('min')){
             hero.classList.add('min');
