@@ -89,9 +89,13 @@
     }
 
     #socialcontainer{
+        justify-content: flex-start;
         width: 100%;
         max-width: 100%;
-        gap: 25px;
+    }
+
+    .social{
+        padding: 25px;
     }
 
 }
@@ -99,9 +103,5 @@
 @media all and (max-width: 650px) {
     #socialcontainer{
         justify-content: space-between;
-    }
-
-    .social{
-        padding: 20px;
     }
 }

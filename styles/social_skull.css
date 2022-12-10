@@ -16,9 +16,9 @@
 }
 
 .leftEye{
-    animation: leftEye 5s linear infinite;
+    animation: leftEye 5s ease-in infinite;
 }
 
 .rightEye{
-    animation: rightEye 5s linear infinite;  
+    animation: rightEye 5s ease-in infinite;  
 }
