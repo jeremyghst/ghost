@@ -1,6 +1,6 @@
-function fade(dir){
+function fadeAbout(dir){
     const container = document.getElementById('about_container')
-	const elements = Array.from(container.getElementsByClassName('fadein'));
+	const elements = Array.from(container.getElementsByClassName('aboutFadein'));
     
     elements.forEach(element => {
 

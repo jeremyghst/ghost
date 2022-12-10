@@ -22,7 +22,6 @@ function onMove(){
     const hero = document.getElementById('hero');
 
     const socialmedia = document.getElementById('socialmedia').getBoundingClientRect();
-    const social = Array.from(document.getElementsByClassName('social'));
 
     if(window.pageYOffset > 90){
         if(!hero.classList.contains('min')){
@@ -31,7 +30,7 @@ function onMove(){
         if(!header.classList.contains('min')){
             header.classList.add('min');
         }
-        fade('in');
+        fadeAbout('in');
     } else {
         if(hero.classList.contains('min')){
             hero.classList.remove('min');
@@ -39,7 +38,7 @@ function onMove(){
         if(header.classList.contains('min')){
             header.classList.remove('min');
         }
-        fade('out');
+        fadeAbout('out');
     }
 
     if(
@@ -48,16 +47,8 @@ function onMove(){
         socialmedia.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         socialmedia.right <= (window.innerWidth || document.documentElement.clientWidth)
     ){
-        social.forEach(s => {
-            if(!s.classList.contains('visible')){
-                s.classList.add('visible');
-            }
-        })
+        fadeSocial('in');
     } else {
-        social.forEach(s => {
-            if(s.classList.contains('visible')){
-                s.classList.remove('visible');
-            }
-        })
+        fadeSocial('out');
     }
 }
