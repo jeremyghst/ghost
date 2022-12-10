@@ -101,6 +101,10 @@
 }
 
 @media all and (max-width: 650px) {
+    #socialmedia{
+        gap: 25px;
+    }
+    
     #socialcontainer{
         gap: 25px;
         justify-content: space-between;
