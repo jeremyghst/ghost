@@ -1,0 +1,30 @@
+#balance{
+    height: 200px;
+    animation: balance 10s linear infinite;
+    margin: 75px auto 0;
+    position: relative;
+    bottom: -100vh;
+    left: -100vw;
+    transition: 1s;
+    opacity: 0;
+}
+
+#balance.visible{
+    opacity: 1;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+}
+
+@media all and (max-width: 999px) {
+    #balance{
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 650px) {
+    #balance{
+        margin: 25px auto 0;
+        max-width: 50%;
+    }
+}

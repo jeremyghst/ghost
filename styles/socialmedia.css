@@ -1,0 +1,84 @@
+#socialmedia{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    position: relative;
+}
+
+.social{
+    position: relative;
+    background: transparent;
+    border-radius: 10px;
+    max-height: 150px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    padding: 25px 25px 25px;
+    width: 150px;
+    max-width: 360px;
+    transition: 1s;
+    background-color: #266B63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social img{
+    height: 50px;
+    max-height: 100%;
+    opacity: 30%;
+    transition: 0.5s;
+}
+
+.social:hover{
+    animation: shake 0.8s infinite;
+}
+
+.social:hover img{
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+/* First child */
+.social:nth-child(1){
+    left: -100vw;
+    opacity: 0;
+}
+
+/* Second child */
+.social:nth-child(2){
+    opacity: 0;
+    bottom: -100vh;
+}
+
+/* Third child */
+.social:nth-child(3){
+    left: 100vw;
+    opacity: 0;
+}
+
+/* Fade in */
+.social.visible{
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    transition: 1s;
+}
+
+@media all and (max-width: 999px) {
+    #about_categories{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media all and (max-width: 650px) {
+    #socialmedia{
+        gap: 25px;
+        justify-content: space-between;
+    }
+
+    .social{
+        padding: 20px;
+    }
+}

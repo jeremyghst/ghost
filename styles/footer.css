@@ -11,6 +11,10 @@
     height: 25px;
 }
 
+#footer #tag:hover{
+    animation: shake 0.8s infinite;
+}
+
 #footer p{
     width: 100%;
     color: #266B63;

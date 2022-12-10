@@ -11,238 +11,44 @@
     padding-bottom: 25px;
 }
 
-#about_categories{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 50px;
-    transition: 1s;
-    /* height: 524px; */
-    min-width: calc(100% - 370px);
-    width: calc(100% - 370px);
-    max-width: calc(100% - 370px);
-
-    position: relative;
+@media all and (max-width: 999px) {
+    #about_container{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
-#intro{
-    width: 320px;
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
-}
-
-#intro_text{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-#intro p{
-    font-size: 18px;
-    text-align: justify;
-}
-
-#intro #slogan{
-    font-weight: bold;
-    color: #266B63;
-    font-size: 30px;
-}
-
-#balance{
-    height: 200px;
-    animation: balance 10s linear infinite;
-    margin: 75px auto 0;
-    position: relative;
-    bottom: -100vh;
-    left: -100vw;
-    transition: 1s;
-    opacity: 0;
-}
-
-#balance.visible{
-    opacity: 1;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-}
-
-.category{
-    position: relative;
-    border-radius: 10px;
-    transition: 1s;
-    color: #212254;
-
-    width: 150px;
-    max-width: 360px;
-
-    max-height: 150px;
-    
-    aspect-ratio: 1/1;
-        
-    overflow: hidden;
-    transition: 1s;
-    padding: 25px 25px 25px;
-    background: transparent;
-}
 
 
-.category.selected{
-    display: block;
-    width: 100%;
-    max-width: 360px;
-
-    transition: 1s;
-    aspect-ratio: auto;
-    padding: 25px 25px 50px;
-    background: #DB5957;
-}
-
-.category:nth-child(1).selected{
-    max-height: 524px;
-}
-
-.category:nth-child(2).selected{
-    max-height: 431px;
-}
-
-.category:nth-child(3).selected{
-    max-height: 383px;
-}
-
-.category:not(.selected):hover{
-    animation: shake 0.8s infinite;
-}
-
-.category.selected:hover{
-    animation: shake 0.8s 1;
-}
-
-.category .card{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    opacity: 1;
-    transition: 1s;
-}
-
-.category .card.invisible{
-    opacity: 0;
-    transition: 1s;
-}
-
-.category .card .flex_col{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
 
 
-.category .about_icon{
-    height: 100%;
-    max-height: 200px;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    transition: 1s;
-}
-
-.category.selected .about_icon{
-    transition: 1s;
-}
-
-.flex_col .study_date{
-    font-size: 14px;
-}
-
-.category h4{
-    font-size: 18px;
-}
-
-.category .card a{
-    color: #212254;
-}
-
-.category:nth-child(1){
-    left: -100vw;
-    opacity: 0;
-    background-color: #DB5957;
-}
-
-.category:nth-child(1) h3{
-    background-image: url('./../assets/skull_red.svg');
-}
 
 
-.category:nth-child(1) h4{
-    color: #A22522;
-}
 
-.category:nth-child(2){
-    opacity: 0;
-    bottom: -100vh;
-    background-color: #8E7DBE;
-}
 
-.category:nth-child(2) h3{
-    background-image: url('./../assets/skull_purple.svg');
-}
 
-.category:nth-child(2) h4{
-    color: #5F4B95;
-}
 
-.category:nth-child(3) h3{
-    background-image: url('./../assets/skull_yellow.svg');
-}
 
-.category:nth-child(3){
-    left: 100vw;
-    opacity: 0;
-    background-color: #FCDC4D;
-}
 
-.category:nth-child(3) h4{
-    color: #C9A503;
-}
 
-.category.visible{
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-    transition: 1s;
-}
 
-.flex_skill{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
-.flex_skill p{
-    min-width: 90px;
-    width: 90px;
-    max-width: 90px;
-}
 
-.flex_skill .progressbar{
-    width: 100%;
-    background: #5F4B95;
-    height: 18px;
-    border-radius: 5px;
-    overflow: hidden;
-}
 
-.flex_skill .progressbar .progress{
-    height: 100%;
-    border-radius: 3px;
-    background-color: #BFCFFA;
-    width: 0%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (max-width: 999px) {
     #about_container{
@@ -254,37 +60,9 @@
         width: 100%;
         max-width: 100%;
     }
-
-    #intro{
-        width: 100%;
-        max-width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #intro_text{
-        align-items: flex-start;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    #balance{
-        margin: 0;
-    }
 }
 
 @media all and (max-width: 650px) {
-    #intro{
-        width: 100%;
-        max-width: 100%;
-        flex-direction: column;
-    }
-
-    #balance{
-        margin: 25px auto 0;
-        max-width: 50%;
-    }
-
     #about_categories{
         gap: 25px;
         justify-content: space-between;

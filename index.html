@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/x-icon" href="./assets/ghost.svg">
+    <link rel="icon" href="./assets/ghost.svg">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/navigation.css">
     <link rel="stylesheet" href="./styles/hero.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/about_intro.css">
+    <link rel="stylesheet" href="./styles/about_balance.css">
+    <link rel="stylesheet" href="./styles/category.css">
+    <link rel="stylesheet" href="./styles/skills.css">
+    <link rel="stylesheet" href="./styles/socialmedia.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/keyframes.css">
 
@@ -31,8 +37,7 @@
     <script src="./javascript/setProfession.js" defer></script>
     <script src="./javascript/setSkills.js" defer></script>
     <script src="./javascript/about.js" defer></script>
-    <script src="./javascript/navigation.js" defer></script>
-
+    <script src="./javascript/tag.js" defer></script>
 
     <title>Ghost Development</title>
 </head>
@@ -40,17 +45,17 @@
     <header id="header">
             <nav id="header_nav">
                 <ul>
-                    <li>
+                    <li id="ghost">
                         <h1>
                             <a href="/">
-                                <img src="./assets/ghost.svg" id="ghost" alt="ghost">
+                                <img src="./assets/ghost.svg" alt="ghost">
                             </a>
                         </h1>
                     </li>
-                    <li>
-                        <button>
+                    <li id="instagram">
+                        <a href="http://instagram.com/_u/jeremyghst/" rel="noopener noreferrer nofollow"  target="_blank">
                             <img src="./assets/instagram.svg" alt="instagram">
-                        </button>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -65,14 +70,14 @@
     </header>
     <main>
         <article id="about">
-            <h2>about</h2>
+            <p id="greeting">Boooooo!</p>
             <section id="about_container">
                 <div id="intro">
                     <div id="intro_text">
                         <p>
-                            Boooooo! My name is Jeremy van Lonkhuizen and i am a developer. My passions are web development and personal development. At work, i use web development to help people with autism in their personal growth and improvement of their quality of life.                   
+                            My name is Jeremy van Lonkhuizen and i am a developer. My passions are web development and personal development. At work, i use web development to help people with autism in their personal growth and with the improvement of their quality of life.                   
                         </p>
-                        <p id="slogan">Balance is key.</p>
+                        <h2 id="slogan">Balance is key.</h2>
                     </div>
             
                     <img src="./assets/balance.svg" class="fadein" id="balance" alt="balance">
@@ -80,12 +85,14 @@
                 
                 <div id="about_categories">
                     <div class="category fadein">
-                        <h3 class="about_icon">
-                        </h3>
+                       
                         <div class="card invisible">
+                            <h3>
+                                Ghost development
+                            </h3>
                             <div class="flex_col">
                                 <h4>name</h4>
-                                <p>Jeremy Ghost</p>
+                                <p>Jeremy van Lonkhuizen</p>
                             </div>
                             <div class="flex_col">
                                 <h4>age</h4>
@@ -109,14 +116,15 @@
                             </div>
                             <div class="flex_col">
                                 <h4>work</h4>
-                                <a href="">Spectrum multimedia & IT</a>
+                                <a href="https://www.spectrummultimedia.nl/" rel="noopener noreferrer nofollow"  target="_blank">Spectrum multimedia & IT</a>
                             </div>
                         </div>
                     </div>
-                    <div class="category fadein">
-                        <h3 class="about_icon">
-                        </h3>
+                    <div class="category fadein web">
                         <div class="card invisible">
+                            <h3>
+                                Web development
+                            </h3>
                             <div class="flex_col">
                                 <h4>basics</h4>
                                 <div class="flex_skill">
@@ -176,26 +184,67 @@
                             </div>
                         </div>
                     </div>
-                    <div class="category fadein">
-                        <h3 class="about_icon">
-                        </h3>
+                    <div class="category fadein personal">
                         <div class="card invisible">
+                            <h3>
+                                Personal development
+                            </h3>
                             <div class="flex_col">
-                                <h4>Heart</h4>
-                                <p>1. Self love</p>
-                                <p>2. Spread love</p>
+                                <h4>heart</h4>
+                                <div class="flex_skill">
+                                    <p>self-love:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="selflove"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>love others:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="spreadlove"></div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex_col">
-                                <h4>Mental</h4>
-                                <p>1. P.M.A</p>
-                                <p>2. Self knowledge</p>
-                                <p>3. Meditation</p>
+                                <h4>mental</h4>
+                                <div class="flex_skill">
+                                    <p>p.m.a:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="pma"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>reflection:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="selfknowledge"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>meditation:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="meditation"></div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex_col">
-                                <h4>Body</h4>
-                                <p>1. Fitness</p>
-                                <p>2. Acupressure</p>
-                                <p>3. Stretching</p>
+                                <h4>body</h4>
+                                <div class="flex_skill">
+                                    <p>exercise:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="fitness"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>acupressure:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="accupressure"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_skill">
+                                    <p>stretching:</p>
+                                    <div class="progressbar">
+                                        <div class="progress" id="stretching"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -203,10 +252,22 @@
 
             </section>
         </article>
+
+        <article id="socialmedia">
+            <div class="social fadein">
+                <img src="./assets/github.svg" alt="github">
+            </div>
+            <div class="social fadein">
+                <img src="./assets/trello.svg" alt="trello">
+            </div>
+            <div class="social fadein">
+                <img src="./assets/discord.svg" alt="discord">
+            </div>
+        </article>
     </main>
     <footer id="footer">
         <p>&copy; copyright</p>
-        <img src="./assets/tag.png" alt="tag" id="tag">
+        <img src="./assets/tag.png" id="tag" alt="tag">
         <p id="copyrightYear"></p>
     </footer>
 </body>

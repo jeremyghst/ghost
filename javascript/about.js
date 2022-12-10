@@ -1,26 +1,20 @@
-window.addEventListener('scroll', function() {
+function fade(dir){
     const container = document.getElementById('about_container')
 	const elements = Array.from(container.getElementsByClassName('fadein'));
-    const position = container.getBoundingClientRect();
+    
+    elements.forEach(element => {
 
-    if(position.top + 125 < window.innerHeight && position.bottom >= 0) {
-
-        elements.forEach(element => {
-
+        if(dir === 'in'){
             if(!element.classList.contains('visible')){
                 element.classList.add('visible');
             }
-        })
-
-    } else {
-        elements.forEach(element => {
-
+        } else {
             if(element.classList.contains('visible')){
                 element.classList.remove('visible');
             }
-        })
-    }
-});
+        }
+    })
+}
 
 const categories = Array.from(document.getElementsByClassName('category'));
 categories.forEach(cat => {

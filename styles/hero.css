@@ -8,6 +8,7 @@
     transition: 1s;
     padding: 0 0 150px;
 }
+
 #hero.min{
     min-height: 0px;
     transition: 1s;
@@ -27,10 +28,10 @@
 }
 
 #gh{
-    z-index: -1;
-    left: 5%;
-    max-width: 30%;
     animation: left_tag 1s 1 ease-in;
+    max-width: 30%;
+    left: 5%;
+    z-index: -1;
 }
 
 #boo{
@@ -39,8 +40,8 @@
 }
 
 #st{
-    z-index: 1;
-    right: 15%;
-    max-width: 30%;
     animation: right_tag 1s 1 ease-in;
+    max-width: 30%;
+    right: 15%;
+    z-index: 1;
 }

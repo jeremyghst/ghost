@@ -1,0 +1,55 @@
+#greeting{
+    font-weight: bold;
+    color: #266B63;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#intro{
+    width: 320px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+#intro_text{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#intro p{
+    font-size: 18px;
+    text-align: justify;
+}
+
+#intro #slogan{
+    font-weight: bold;
+    color: #266B63;
+    font-size: 30px;
+}
+
+@media all and (max-width: 999px) {
+    #intro{
+        width: 100%;
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #intro_text{
+        align-items: flex-start;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media all and (max-width: 650px) {
+    #intro{
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+    }
+}
