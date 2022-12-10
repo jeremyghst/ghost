@@ -4,6 +4,15 @@
     align-items: flex-start;
     gap: 50px;
     position: relative;
+    margin-top: 50px;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+#socialmedia.visible{
+    margin-top: 225px;
+    transition: 1s;
+    transition-delay: 1s;
 }
 
 .social{
