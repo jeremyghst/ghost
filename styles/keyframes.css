@@ -80,3 +80,27 @@
         opacity: 1;
     }
 }
+
+@keyframes leftEye {
+    0%{
+        cx: 49.7989px;
+    }
+    50%{
+        cx: 62.1738px;
+    }
+    100%{
+        cx: 49.7989px;
+    }
+}
+
+@keyframes rightEye {
+    0%{
+        cx: 117.96px;
+    }
+    50%{
+        cx: 130.335px;
+    }
+    100%{
+        cx: 117.96px;
+    }
+}

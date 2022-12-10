@@ -1,6 +1,7 @@
 #socialmedia{
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 50px;
     position: relative;
@@ -13,6 +14,13 @@
     margin-top: 225px;
     transition: 1s;
     transition-delay: 1s;
+}
+
+#socialcontainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
 }
 
 .social{
@@ -34,7 +42,7 @@
 
 .social img{
     height: 50px;
-    max-height: 100%;
+    max-width: 100%;
     opacity: 30%;
     transition: 0.5s;
 }
@@ -74,16 +82,22 @@
     transition: 1s;
 }
 
-@media all and (max-width: 999px) {
-    #about_categories{
+@media all and (max-width: 850px) {
+    #socialmedia{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #socialcontainer{
         width: 100%;
         max-width: 100%;
+        gap: 25px;
     }
+
 }
 
 @media all and (max-width: 650px) {
-    #socialmedia{
-        gap: 25px;
+    #socialcontainer{
         justify-content: space-between;
     }
 

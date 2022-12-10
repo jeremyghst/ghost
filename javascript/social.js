@@ -3,7 +3,7 @@
 function fadeSocial(dir){
     const socials = Array.from(document.getElementsByClassName('socialFadein'));
     const socialmedia = document.getElementById('socialmedia')
-    
+
     socials.forEach(social => {
 
         if(dir === 'in'){
