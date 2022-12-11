@@ -107,5 +107,8 @@
     }
 }
 
-@media all and (max-width: 570px){
+@media all and (max-width: 450px){
+    .social img{
+        height: 30px;
+    }
 }
