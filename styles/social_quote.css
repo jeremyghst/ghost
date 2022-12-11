@@ -9,12 +9,12 @@
 
 #socialQuotes{
     opacity: 0;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #socialQuotes.visible{
     opacity: 1;
-    transition:  1s
+    transition: 0.5s;
 }
 
 #socialQuotes h3, #socialQuotes p{
