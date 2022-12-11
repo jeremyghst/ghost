@@ -21,12 +21,11 @@
     position: relative;
     background: transparent;
     border-radius: 10px;
-    max-height: 150px;
     overflow: hidden;
     aspect-ratio: 1/1;
     padding: 25px 25px 25px;
     width: 150px;
-    max-width: 360px;
+    max-height: 150px;
     transition: 1s;
     background-color: #266B63;
     display: flex;
