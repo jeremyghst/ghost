@@ -83,24 +83,24 @@
 
 @keyframes leftEye {
     0%{
-        cx: 49.7989px;
+        cx: 168.226px;
     }
     50%{
-        cx: 62.1738px;
+        cx: 206.226px;
     }
     100%{
-        cx: 49.7989px;
+        cx: 168.226px;
     }
 }
 
 @keyframes rightEye {
     0%{
-        cx: 117.96px;
+        cx: 368.195px;
     }
     50%{
-        cx: 130.335px;
+        cx: 405.195px;
     }
     100%{
-        cx: 117.96px;
+        cx: 368.195px;
     }
 }
