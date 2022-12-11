@@ -1,0 +1,36 @@
+#social_qoute{
+    width: 320px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+#social_qoute h3, #social_qoute p{
+    font-weight: bold;
+    color: #266B63;
+    font-size: 30px;
+}
+
+#social_qoute #qoute h3{
+    margin-bottom: 25px;
+}
+
+@media all and (max-width: 850px) {
+    #social_qoute{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+
+}
+
+@media all and (max-width: 570px){
+    #social_qoute{
+        display: flex;
+        flex-direction: column;
+    }
+}
