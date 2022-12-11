@@ -79,7 +79,6 @@
     #socialmedia{
         flex-direction: column-reverse;
         align-items: center;
-        padding-top: 175px;
     }
 
     #socialcontainer{
@@ -98,5 +97,11 @@
     #socialcontainer{
         gap: 25px;
         justify-content: space-between;
+    }
+}
+
+@media all and (max-width: 570px){
+    #socialmedia{
+        padding-top: 175px;
     }
 }
