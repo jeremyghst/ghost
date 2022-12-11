@@ -40,6 +40,8 @@ function onMove(){
             header.classList.remove('min');
         }
         fadeAbout('out');
+        fadeSocial('out');
+        fadeSocialQoute('out');
     }
 
     if(
@@ -58,8 +60,5 @@ function onMove(){
         socialmedia.right <= (window.innerWidth || document.documentElement.clientWidth)
     ){
         fadeSocial('in');
-    } else {
-        fadeSocial('out');
-        fadeSocialQoute('out');
     }
 }
