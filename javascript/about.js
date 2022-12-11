@@ -47,7 +47,7 @@ function selectCategory(target){
             cat.getElementsByClassName('card')[0].classList.remove('invisible');
 
             setTimeout(() => {
-                cat.scrollIntoView({behavior: "smooth", block: "start"});
+                cat.scrollIntoView({behavior: "smooth", block: "center"});
             }, 500)
         } else {
             cat.classList.add('deselected');
