@@ -101,10 +101,11 @@
         gap: 25px;
         justify-content: space-between;
     }
-}
 
-@media all and (max-width: 570px){
     #socialmedia{
         padding-top: 150px;
     }
+}
+
+@media all and (max-width: 570px){
 }
