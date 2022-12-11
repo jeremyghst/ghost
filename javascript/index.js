@@ -21,6 +21,7 @@ function onMove(){
     const header = document.getElementById('header');
     const hero = document.getElementById('hero');
 
+    const socialQuotes = document.getElementById('socialQuotes').getBoundingClientRect();
     const socialmedia = document.getElementById('socialmedia').getBoundingClientRect();
 
     if(window.pageYOffset > 90){
@@ -42,6 +43,15 @@ function onMove(){
     }
 
     if(
+        socialQuotes.top >= 0 &&
+        socialQuotes.left >= 0 &&
+        socialQuotes.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        socialQuotes.right <= (window.innerWidth || document.documentElement.clientWidth)
+    ){
+        fadeSocialQoute('in');
+    }
+
+    if(
         socialmedia.top >= 0 &&
         socialmedia.left >= 0 &&
         socialmedia.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
@@ -50,5 +60,6 @@ function onMove(){
         fadeSocial('in');
     } else {
         fadeSocial('out');
+        fadeSocialQoute('out');
     }
 }
