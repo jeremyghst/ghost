@@ -9,11 +9,13 @@
 
 #socialQuotes{
     opacity: 0;
+    transition-delay: 0.5s;
     transition: 1s;
 }
 
 #socialQuotes.visible{
     opacity: 1;
+    transition-delay: 0.5s;
     transition: 1s;
 }
 
