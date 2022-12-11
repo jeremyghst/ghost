@@ -5,7 +5,7 @@
     font-size: 18px;
 }
 
-#intro{
+#aboutIntro{
     width: 320px;
     max-width: 320px;
     display: flex;
@@ -20,19 +20,20 @@
     gap: 25px;
 }
 
-#intro p{
+#aboutIntro p{
     font-size: 18px;
     text-align: justify;
 }
 
-#intro #slogan{
+#aboutIntro #slogan{
     font-weight: bold;
     color: #266B63;
     font-size: 30px;
+    font-style: italic;
 }
 
 @media all and (max-width: 999px) {
-    #intro{
+    #aboutIntro{
         width: 100%;
         max-width: 100%;
         flex-direction: row;
@@ -47,7 +48,7 @@
 }
 
 @media all and (max-width: 650px) {
-    #intro{
+    #aboutIntro{
         width: 100%;
         max-width: 100%;
         flex-direction: column;
