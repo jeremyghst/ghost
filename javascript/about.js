@@ -67,6 +67,10 @@ function closeCategory(target){
     const deselected_categories = Array.from(document.getElementsByClassName('deselected'));
     deselected_categories.forEach(cat => {
         cat.classList.remove('deselected');
+
+        setTimeout(() => {
+            cat.scrollIntoView({behavior: "smooth", block: "center"});
+        }, 500)
     })
 
     container.classList.remove('selected');
