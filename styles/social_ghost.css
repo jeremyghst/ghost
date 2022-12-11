@@ -38,6 +38,6 @@
 
 @media all and (max-width: 570px){
     #socialghost{
-        margin-left: auto;
+        margin: 0 auto;
     }
 }
