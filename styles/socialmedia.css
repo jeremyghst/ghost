@@ -79,6 +79,7 @@
     #socialmedia{
         flex-direction: column-reverse;
         align-items: center;
+        padding-top: 175px;
     }
 
     #socialcontainer{
