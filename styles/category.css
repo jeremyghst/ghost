@@ -21,6 +21,23 @@
     width: 150px;
     max-width: 360px;
     transition: 1s;
+    display: flex;
+}
+
+.category .category_icon{
+    height: 50px;
+    max-width: 100%;
+    opacity: 30%;
+    transition: 0.5s;
+}
+
+.category:hover .category_icon{
+    opacity: 100%;
+    transition: 0.5s;
+} 
+
+.category.selected .category_icon{
+    height: 0;
 }
 
 .category .card{
@@ -166,5 +183,11 @@
         padding: 0;
         width: 0%;
         height: 0%;
+    }
+}
+
+@media all and (max-width: 450px){
+    .category_icon{
+        height: 30px;
     }
 }
