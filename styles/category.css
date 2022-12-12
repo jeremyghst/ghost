@@ -21,14 +21,16 @@
     width: 150px;
     max-width: 360px;
     transition: 1s;
-    display: flex;
 }
 
 .category .category_icon{
+    position: absolute;
+    inset: 0;
+    margin: auto;
     height: 50px;
-    max-width: 100%;
+    max-width: calc(100% - 20px);
     opacity: 30%;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .category:hover .category_icon{
@@ -38,6 +40,7 @@
 
 .category.selected .category_icon{
     height: 0;
+    transition: 0.5s;
 }
 
 .category .card{
