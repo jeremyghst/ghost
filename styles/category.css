@@ -35,6 +35,7 @@
 
 .category:hover .category_icon{
     opacity: 100%;
+    transition-delay: 1s;
     transition: 0.5s;
 } 
 

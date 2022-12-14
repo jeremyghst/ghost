@@ -45,10 +45,7 @@ function onMove(){
     }
 
     if(
-        socialQuotes.top >= 0 &&
-        socialQuotes.left >= 0 &&
-        socialQuotes.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        socialQuotes.right <= (window.innerWidth || document.documentElement.clientWidth)
+        window.pageYOffset > socialQuotes.top
     ){
         fadeSocialQoute('in');
     }
