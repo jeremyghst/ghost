@@ -87,19 +87,24 @@
     animation: shake 0.8s 1;
 }
 
+
+.category{
+    background-color: #266B63;
+    color: #ECF1FE;
+}
+
+.category h3, .category h4{
+    color: #3BA99C;
+}
 /* First child */
 .category:nth-child(1){
     left: -100vw;
     opacity: 0;
-    background-color: #DB5957;
 }
 
-.category:nth-child(1) h3, .category:nth-child(1) h4 {
-    color: #A22522;
-}
 
 .category:nth-child(1) a{
-    color: #11122C;
+    color: #BFCFFA;
     margin-right: auto;
 }
 
@@ -115,11 +120,6 @@
 .category:nth-child(2){
     opacity: 0;
     bottom: -100vh;
-    background-color: #8E7DBE;
-}
-
-.category:nth-child(2) h3, .category:nth-child(2) h4{
-    color: #5F4B95;
 }
 
 .category:nth-child(2).selected{
@@ -130,11 +130,6 @@
 .category:nth-child(3){
     left: 100vw;
     opacity: 0;
-    background-color: #FCDC4D;
-}
-
-.category:nth-child(3) h3, .category:nth-child(3) h4{
-    color: #C9A503;
 }
 
 .category:nth-child(3).selected{

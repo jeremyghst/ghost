@@ -17,11 +17,8 @@
     overflow: hidden;
 }
 
-.web .progressbar{
-    background: #5F4B95;
-}
-.personal .progressbar{
-    background: #C9A503;
+.web .progressbar, .personal .progressbar{
+    background: #3BA99C;
 }
 
 .flex_skill .progressbar .progress{
@@ -30,9 +27,6 @@
     width: 0%;
 }
 
-.web .progress{
-    background: #C4BBDD;
-}
-.personal .progress{
-    background: #FEEFAF;
+.web .progress, .personal .progress{
+    background: #ECF1FE;
 }
