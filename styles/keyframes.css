@@ -81,7 +81,7 @@
     }
 }
 
-@keyframes leftEye {
+@keyframes leftEye_ghost {
     0%{
         cx: 261.226px;
     }
@@ -93,7 +93,7 @@
     }
 }
 
-@keyframes rightEye {
+@keyframes rightEye_ghost {
     0%{
         cx: 461.195px;
     }
@@ -102,5 +102,29 @@
     }
     100%{
         cx: 461.195px;
+    }
+}
+
+@keyframes leftEye_vox {
+    0%{
+        cx: 315.013px;
+    }
+    50%{
+        cx: 298.226px;
+    }
+    100%{
+        cx: 315.013px;
+    }
+}
+
+@keyframes rightEye_vox {
+    0%{
+        cx: 437.013px;
+    }
+    50%{
+        cx: 420.226px;
+    }
+    100%{
+        cx: 437.013px;
     }
 }

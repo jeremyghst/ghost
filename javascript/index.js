@@ -1,6 +1,13 @@
 "use strict"
-
 window.addEventListener("load", () => {
+    if(!localStorage.hasOwnProperty('state')){
+        localStorage.setItem("state", "ghost"); 
+    } else {
+        if(localStorage.getItem('state') !== 'ghost'){
+            switchFunc();
+        }
+    }
+
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 

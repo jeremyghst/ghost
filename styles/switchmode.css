@@ -1,0 +1,65 @@
+body.voxMode{
+    background: #4B63AA;
+    color: #120802;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.voxMode #hero_animation{
+    padding-left: 0;
+}
+
+body.voxMode #boo{
+    max-width: 35%;
+}
+
+body.voxMode #gh{
+    left: 15%;
+}
+body.voxMode #st{
+    right: 15%;
+}
+
+body.voxMode #greeting,
+body.voxMode #aboutIntro #slogan,
+body.voxMode #socialQuotes h3, 
+body.voxMode  #socialQuotes p,
+body.voxMode #footer p
+{
+    color: #2C3963;
+}
+
+body.voxMode .category, body.voxMode .social{
+    background-color: #2C3963;
+}
+
+body.voxMode .category h3, 
+body.voxMode .category h4{
+    color: #4B63AA;
+}
+
+body.voxMode .category a{
+    color: #EE6123;
+}
+
+body.voxMode .web .progressbar,
+body.voxMode .personal .progressbar
+{
+    background-color: #4B63AA;
+}
+
+body.voxMode .icon{
+    fill: #4B63AA;
+    stroke: #4B63AA;
+}
+
+body.voxMode #tag .icon{
+    fill: #541312;
+}
+
+body.voxMode #socialghost{
+    display: none;
+}
+
+body.voxMode #socialvox{
+    display: block;
+}

@@ -34,9 +34,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.5s;
 }
 
-.social img{
+.social svg{
     height: 50px;
     max-width: 100%;
     opacity: 30%;
@@ -47,7 +48,7 @@
     animation: shake 0.8s infinite;
 }
 
-.social:hover img{
+.social:hover svg{
     opacity: 100%;
     transition: 0.5s;
 }
@@ -108,7 +109,7 @@
 }
 
 @media all and (max-width: 450px){
-    .social img{
+    .social svg{
         height: 30px;
     }
 }

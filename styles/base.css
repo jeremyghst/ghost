@@ -13,6 +13,7 @@ body{
     background: #3BA99C;
     color: #11122C;
     padding: 0 25px;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 body.locked{
