@@ -1,7 +1,7 @@
 body.foxMode{
     background: #4B63AA;
     color: #120802;
-    transition: background-color 0.5s, color 0.5s;
+    transition: background-color 1s, color 1s;
 }
 
 body.foxMode #hero_animation{
