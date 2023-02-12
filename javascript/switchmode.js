@@ -12,6 +12,7 @@ const balance_logo = document.getElementById('balance');
 const footer_logo = document.getElementById('tag');
 const favicon_logo = document.getElementById('favicon');
 
+const greeting = document.getElementById('greeting');
 
 function switchFunc(){
     resetHero();
@@ -26,6 +27,8 @@ function switchFunc(){
 
         document.title = "Fox mode - Ghost development"; 
 
+        greeting.innerText = 'Wooooof!';
+
         state = 'fox';
     } else {
         bodyElement.classList.remove('foxMode');
@@ -33,8 +36,11 @@ function switchFunc(){
         hero_logo.src = './assets/ghost_beanie.svg';
         balance_logo.src = './assets/balance_ghost.svg';
         footer_logo.src = './assets/tag_ghost.png';
-        document.title = "Ghost development";
         favicon_logo.href = './assets/ghost.svg';
+
+        document.title = "Ghost development";
+
+        greeting.innerText = 'Boooooo!';
 
         state = 'ghost';
     }
