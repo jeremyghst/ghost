@@ -1,4 +1,4 @@
-#socialghost, #socialvox{
+#socialghost, #socialfox{
     height: 200px;
     position: relative;
     bottom: -100vh;
@@ -8,11 +8,11 @@
     opacity: 0;
 }
 
-#socialvox{
+#socialfox{
     display: none;
 }
 
-#socialghost.visible, #socialvox.visible{
+#socialghost.visible, #socialfox.visible{
     opacity: 1;
     bottom: 0;
     left: 0;
@@ -28,28 +28,28 @@
     animation: rightEye_ghost 5s ease-in-out infinite;  
 }
 
-#socialvox .leftEye{
-    animation: leftEye_vox 5s ease-in-out infinite;
+#socialfox .leftEye{
+    animation: leftEye_fox 5s ease-in-out infinite;
 }
 
-#socialvox .rightEye{
-    animation: rightEye_vox 5s ease-in-out infinite;  
+#socialfox .rightEye{
+    animation: rightEye_fox 5s ease-in-out infinite;  
 }
 
 @media all and (max-width: 850px) {
-    #socialghost, #socialvox{
+    #socialghost, #socialfox{
         margin: 0;
     }
 }
 
 @media all and (max-width: 650px) {
-    #socialghost, #socialvox{
+    #socialghost, #socialfox{
         max-width: 50%;
     }
 }
 
 @media all and (max-width: 570px){
-    #socialghost, #socialvox{
+    #socialghost, #socialfox{
         margin: 0 auto;
     }
 }

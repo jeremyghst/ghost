@@ -1,10 +1,5 @@
 "use strict"
-window.addEventListener("load", async () => {
-    if(!localStorage.getItem('state') ||
-         localStorage.getItem('state') !== 'ghost' &&
-        localStorage.setItem("state", "ghost")
-        )
-
+window.addEventListener("load", () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 

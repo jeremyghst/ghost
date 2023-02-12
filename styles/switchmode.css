@@ -1,65 +1,65 @@
-body.voxMode{
+body.foxMode{
     background: #4B63AA;
     color: #120802;
     transition: background-color 0.5s, color 0.5s;
 }
 
-body.voxMode #hero_animation{
+body.foxMode #hero_animation{
     padding-left: 0;
 }
 
-body.voxMode #boo{
+body.foxMode #boo{
     max-width: 35%;
 }
 
-body.voxMode #gh{
+body.foxMode #gh{
     left: 15%;
 }
-body.voxMode #st{
+body.foxMode #st{
     right: 15%;
 }
 
-body.voxMode #greeting,
-body.voxMode #aboutIntro #slogan,
-body.voxMode #socialQuotes h3, 
-body.voxMode  #socialQuotes p,
-body.voxMode #footer p
+body.foxMode #greeting,
+body.foxMode #aboutIntro #slogan,
+body.foxMode #socialQuotes h3, 
+body.foxMode  #socialQuotes p,
+body.foxMode #footer p
 {
     color: #2C3963;
 }
 
-body.voxMode .category, body.voxMode .social{
+body.foxMode .category, body.foxMode .social{
     background-color: #2C3963;
 }
 
-body.voxMode .category h3, 
-body.voxMode .category h4{
+body.foxMode .category h3, 
+body.foxMode .category h4{
     color: #4B63AA;
 }
 
-body.voxMode .category a{
+body.foxMode .category a{
     color: #EE6123;
 }
 
-body.voxMode .web .progressbar,
-body.voxMode .personal .progressbar
+body.foxMode .web .progressbar,
+body.foxMode .personal .progressbar
 {
     background-color: #4B63AA;
 }
 
-body.voxMode .icon{
+body.foxMode .icon{
     fill: #4B63AA;
     stroke: #4B63AA;
 }
 
-body.voxMode #tag .icon{
+body.foxMode #tag .icon{
     fill: #541312;
 }
 
-body.voxMode #socialghost{
+body.foxMode #socialghost{
     display: none;
 }
 
-body.voxMode #socialvox{
+body.foxMode #socialfox{
     display: block;
 }
