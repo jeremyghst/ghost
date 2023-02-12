@@ -23,13 +23,13 @@ function switchFunc(){
 
     if(state === 'ghost'){
         bodyElement.classList.add('foxMode');
-        heading_logo.src = './assets/fox.svg';
+        heading_logo.src = './assets/ghost.svg';
         gh_logo.src = './assets/gh_fox.svg';
         hero_logo.src = './assets/fox_bucket.svg';
         st_logo.src = './assets/st_fox.svg';
         balance_logo.src = './assets/balance_fox.svg';
         footer_logo.src = './assets/tag_fox.png';
-        favicon_logo.href = './assets/fox.svg';
+        favicon_logo.href = './assets/fox_head.svg';
 
         document.title = "Fox mode - Ghost development"; 
 
@@ -38,7 +38,7 @@ function switchFunc(){
         state = 'fox';
     } else {
         bodyElement.classList.remove('foxMode');
-        heading_logo.src = './assets/ghost.svg';
+        heading_logo.src = './assets/fox_head.svg';
         gh_logo.src = './assets/gh_ghost.svg';
         hero_logo.src = './assets/ghost_beanie.svg';
         st_logo.src = './assets/st_ghost.svg';
