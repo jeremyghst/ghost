@@ -10,13 +10,8 @@ const footer_logo = document.getElementById('tag');
 
 function switchFunc(){
     if(localStorage.getItem('state') === 'ghost'){
-        bodyElement.classList.add('voxMode');
-        heading_logo.src = './assets/vox.svg';
-        hero_logo.src = './assets/vox_bucket.svg';
-        balance_logo.src = './assets/balance_vox.svg';
-        footer_logo.src = './assets/tag_vox.png';
+        setFox();
 
-        localStorage.setItem("state", "vox"); 
     } else {
         bodyElement.classList.remove('voxMode');
         heading_logo.src = './assets/ghost.svg';
@@ -26,4 +21,14 @@ function switchFunc(){
 
         localStorage.setItem("state", "ghost"); 
     }
+}
+
+function setFox(){
+    bodyElement.classList.add('voxMode');
+    heading_logo.src = './assets/vox.svg';
+    hero_logo.src = './assets/vox_bucket.svg';
+    balance_logo.src = './assets/balance_vox.svg';
+    footer_logo.src = './assets/tag_vox.png';
+
+    localStorage.setItem("state", "vox"); 
 }
