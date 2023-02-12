@@ -39,5 +39,11 @@ function switchFunc(){
         state = 'ghost';
     }
 
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    document.body.classList.add('locked');
     setTimeout(setHero, 100);
+    setTimeout(() => {
+        document.body.classList.remove('locked');
+    }, 1000);
 }

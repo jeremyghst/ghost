@@ -4,7 +4,6 @@ window.addEventListener("load", () => {
     document.documentElement.scrollTop = 0;
 
     setHero();
-    
     setProfession();
     setHobby();
     setAge();
