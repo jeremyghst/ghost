@@ -13,10 +13,10 @@ body.foxMode #boo{
 }
 
 body.foxMode #gh{
-    left: 15%;
+    left: 10%;
 }
 body.foxMode #st{
-    right: 15%;
+    right: 10%;
 }
 
 body.foxMode #greeting,
