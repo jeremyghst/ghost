@@ -12,10 +12,11 @@ body.foxMode #boo{
     max-width: 35%;
 }
 
-body.foxMode #gh{
+body.foxMode #gh.animate{
     left: 10%;
 }
-body.foxMode #st{
+
+body.foxMode #st.animate{
     right: 10%;
 }
 

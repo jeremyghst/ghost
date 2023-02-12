@@ -33,13 +33,13 @@
     left: -100vw;
     opacity: 0;
     z-index: -1;
-    transition: 1s;
 }
 
 #gh.animate{
     bottom: 0;
     left: 5%;
     opacity: 1;
+    transition: 1s ease-out;
 }
 
 #boo{
@@ -47,11 +47,11 @@
     transform: rotate(-360deg);
     opacity: 0;
     max-width: 50%;
-    transition: 1s;
 }
 #boo.animate{
     opacity: 1;
     transform: rotate(0deg);
+    transition: 1s ease-out;
 }
 
 #st{
@@ -60,10 +60,10 @@
     top: 100vh;
     right: -100vw;
     opacity: 0;
-    transition: 1s;
 }
 #st.animate{
     top: 0;
     right: 15%;
     opacity: 1;
+    transition: 1s ease-out;
 }

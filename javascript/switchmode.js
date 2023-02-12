@@ -14,6 +14,8 @@ const favicon_logo = document.getElementById('favicon');
 
 
 function switchFunc(){
+    resetHero();
+
     if(state === 'ghost'){
         bodyElement.classList.add('foxMode');
         heading_logo.src = './assets/fox.svg';
@@ -36,4 +38,6 @@ function switchFunc(){
 
         state = 'ghost';
     }
+
+    setTimeout(setHero, 100);
 }

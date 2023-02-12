@@ -17,13 +17,12 @@
     height: 45px;
     opacity: 0;
     right: 100px;
-    transition: 1s;
 }
 
 #header #ghost.animate h1{
     right: 0;
     opacity: 1;
-    transition: 1s;
+    transition: 1s ease-out;
 }
 
 #header_nav #ghost img{
@@ -39,12 +38,11 @@
     border: none;
     left: 100px;
     opacity: 0;
-    transition: 1s;
 }
 #header_nav #instagram.animate{
     left: 0;
     opacity: 1;
-    transition: 1s;
+    transition: 1s ease-out;
 }
 
 #header_nav #instagram button{
