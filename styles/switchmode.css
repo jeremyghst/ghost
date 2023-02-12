@@ -4,6 +4,10 @@ body.foxMode{
     transition: background-color 2s, color 2s;
 }
 
+body.foxMode #header #ghost h1{
+    height: 45px;
+}
+
 body.foxMode #hero_animation{
     padding-left: 0;
 }
