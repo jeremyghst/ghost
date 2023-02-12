@@ -14,7 +14,6 @@ const favicon_logo = document.getElementById('favicon');
 
 
 function switchFunc(){
-
     if(state === 'ghost'){
         bodyElement.classList.add('foxMode');
         heading_logo.src = './assets/fox.svg';

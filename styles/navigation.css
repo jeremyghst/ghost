@@ -15,7 +15,15 @@
 #header #ghost h1{
     position: relative;
     height: 45px;
-    animation: ghost 1s 1 ease-out;
+    opacity: 0;
+    right: 100px;
+    transition: 1s;
+}
+
+#header #ghost.animate h1{
+    right: 0;
+    opacity: 1;
+    transition: 1s;
 }
 
 #header_nav #ghost img{
@@ -29,7 +37,14 @@
 #header_nav #instagram{
     position: relative;
     border: none;
-    animation: insta 1s 1 ease-out;
+    left: 100px;
+    opacity: 0;
+    transition: 1s;
+}
+#header_nav #instagram.animate{
+    left: 0;
+    opacity: 1;
+    transition: 1s;
 }
 
 #header_nav #instagram button{
@@ -37,6 +52,6 @@
     border: none;
 }
 
-#header_nav #instagram button:hover{
+#header_nav #instagram a:hover{
     animation: shake 0.8s infinite;
 }

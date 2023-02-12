@@ -3,6 +3,8 @@ window.addEventListener("load", () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 
+    setHero();
+    
     setProfession();
     setHobby();
     setAge();
