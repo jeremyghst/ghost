@@ -14,7 +14,7 @@
 
 #header #ghost h1{
     position: relative;
-    height: 45px;
+    height: 35px;
     opacity: 0;
     right: 100px;
 }
