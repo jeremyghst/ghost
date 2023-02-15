@@ -35,7 +35,11 @@ function selectCategory(target){
     categories.forEach(cat => {
         if(cat.classList.contains('selected')){
             cat.classList.remove('selected');
-            cat.getElementsByClassName('card')[0].classList.add('invisible');    
+            const fade_item = Array.from(cat.getElementsByClassName('card')[0].getElementsByClassName('visible'));
+            
+            fade_item.forEach(item => {
+                item.classList.remove('visible');
+            })
         }
 
         if(cat.classList.contains('deselected')){
@@ -44,7 +48,19 @@ function selectCategory(target){
 
         if(cat === target){
             cat.classList.add('selected');
-            cat.getElementsByClassName('card')[0].classList.remove('invisible');
+            const fade_item = Array.from(cat.getElementsByClassName('card')[0].getElementsByClassName('fade_item'));
+            
+            fade_item.forEach(item => {
+            })
+
+            let index = 0;
+            const interval = setInterval( () => {
+                fade_item[index].classList.add('visible');
+                index++;
+                if(index > fade_item.length - 1){
+                    clearInterval(interval);
+                }
+            }, 100);
 
             setTimeout(() => {
                 cat.scrollIntoView({behavior: "smooth", block: "center"});
@@ -62,7 +78,11 @@ function closeCategory(target){
     const container = document.getElementById('about_categories');
 
     target.classList.remove('selected');
-    target.getElementsByClassName('card')[0].classList.add('invisible');
+    const fade_item = Array.from(target.getElementsByClassName('card')[0].getElementsByClassName('visible'));
+            
+    fade_item.forEach(item => {
+        item.classList.remove('visible');
+    })
 
     const deselected_categories = Array.from(document.getElementsByClassName('deselected'));
     deselected_categories.forEach(cat => {

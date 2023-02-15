@@ -1,7 +1,7 @@
 #balance{
     height: 200px;
     animation: balance 10s linear infinite;
-    margin: 75px auto 0;
+    margin: 75px 0 0;
     position: relative;
     bottom: -100vh;
     left: -100vw;
