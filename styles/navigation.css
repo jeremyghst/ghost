@@ -45,11 +45,11 @@
     transition: 1s ease-out;
 }
 
-#header_nav #instagram button{
+#header_nav #instagram{
     background: transparent;
     border: none;
 }
 
-#header_nav #instagram a:hover{
+#header_nav #instagram:hover{
     animation: shake 0.8s infinite;
 }

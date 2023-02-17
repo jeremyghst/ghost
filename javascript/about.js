@@ -71,7 +71,6 @@ function selectCategory(target){
 
         container.classList.add('selected');
     })
-
 }
 
 function closeCategory(target){
