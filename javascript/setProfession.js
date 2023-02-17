@@ -12,7 +12,7 @@ function setProfession(){
     profession_timer = setInterval(function(){
         profession_container.innerText = profession_array[i];
 
-        if(i === 2){
+        if(i === 3){
             i = 0;
         } else {
             i++
