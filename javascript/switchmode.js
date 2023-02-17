@@ -1,9 +1,6 @@
 "use strict"
-
-let state = 'ghost';
-
 const switchBtn = document.getElementById('ghost');
-switchBtn.addEventListener('click', switchFunc);
+switchBtn.addEventListener('click', switchState);
 
 const bodyElement = document.getElementById('body');
 const heading_logo = document.getElementById('heading_logo');
@@ -18,10 +15,20 @@ const favicon_logo = document.getElementById('favicon');
 
 const greeting = document.getElementById('greeting');
 
-function switchFunc(){
+function switchState(){
+    if(localStorage.getItem('state') === 'ghost'){
+        current_state = 'fox';
+    } else {
+        current_state = 'ghost';
+    }
+
+    localStorage.setItem('state', current_state);
+    setState();
+}
+function setState(){
     resetHero();
 
-    if(state === 'ghost'){
+    if(localStorage.getItem('state') === 'fox'){
         bodyElement.classList.add('foxMode');
         heading_logo.src = './assets/ghost.svg';
         gh_logo.src = './assets/gh_fox.svg';
@@ -34,8 +41,6 @@ function switchFunc(){
         document.title = "Fox mode - Ghost development"; 
 
         greeting.innerText = 'Wooooof!';
-
-        state = 'fox';
     } else {
         bodyElement.classList.remove('foxMode');
         heading_logo.src = './assets/fox_head.svg';
@@ -49,10 +54,7 @@ function switchFunc(){
         document.title = "Ghost development";
 
         greeting.innerText = 'Boooooo!';
-
-        state = 'ghost';
     }
-
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     document.body.classList.add('locked');

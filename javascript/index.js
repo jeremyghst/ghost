@@ -1,4 +1,6 @@
 "use strict"
+let current_state = 'ghost';
+
 window.addEventListener("load", () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -8,6 +10,11 @@ window.addEventListener("load", () => {
     setHobby();
     setAge();
     setSkills();
+
+    if(!localStorage.hasOwnProperty('state')){
+        localStorage.setItem('state', current_state);
+    }
+    setState()
 
     setTimeout(() => {
         document.body.classList.remove('locked');
