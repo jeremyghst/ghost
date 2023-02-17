@@ -171,8 +171,8 @@
     }
 }
 
-@media all and (max-width: 450px){
-    .category_icon{
-        height: 30px;
+@media all and (max-width: 350px){
+    .category{
+        padding: 10px;
     }
 }
