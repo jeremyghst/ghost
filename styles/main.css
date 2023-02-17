@@ -1,7 +1,7 @@
 main{
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 main article{
     width: 1000px;
