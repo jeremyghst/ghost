@@ -12,7 +12,7 @@ function setHobby(){
     hobby_timer = setInterval(function(){
         hobby_container.innerText = hobby_array[i];
 
-        if(i === 3){
+        if(i === 4){
             i = 0;
         } else {
             i++
