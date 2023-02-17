@@ -6,7 +6,8 @@ const webdevelopment = {
     'reactjs': 50,
     'mysql': 60,
     'php': 70,
-    'laravel': 60
+    'laravel': 60,
+    'figma': 30
 }
 
 const personal = {
