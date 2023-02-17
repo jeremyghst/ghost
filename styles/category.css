@@ -164,6 +164,11 @@
         width: 0%;
         height: 0%;
     }
+
+    .category.deselected h3{
+        opacity: 0;
+        transition: 0.5s;
+    }
 }
 
 @media all and (max-width: 450px){

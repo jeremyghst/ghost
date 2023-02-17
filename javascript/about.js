@@ -60,7 +60,7 @@ function selectCategory(target){
                 if(index > fade_item.length - 1){
                     clearInterval(interval);
                 }
-            }, 100);
+            }, 200);
 
             setTimeout(() => {
                 cat.scrollIntoView({behavior: "smooth", block: "center"});
