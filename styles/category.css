@@ -182,3 +182,13 @@
         padding: 10px;
     }
 }
+
+#profession, #hobby{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#profession.flash, #hobby.flash{
+    opacity: 0;
+    transition: 0.5s
+}

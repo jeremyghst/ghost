@@ -7,7 +7,10 @@ window.addEventListener("load", () => {
 
     setHero();
     setProfession();
-    setHobby();
+
+    setTimeout(() => {
+        setHobby();
+    }, 2500)
     setAge();
     setSkills();
 
