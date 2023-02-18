@@ -31,6 +31,8 @@ function onMove(){
     const socialQuotes = document.getElementById('socialQuotes').getBoundingClientRect();
     const socialmedia = document.getElementById('socialmedia').getBoundingClientRect();
 
+    const selected_category = document.querySelector('.category.selected');
+    
     if(window.pageYOffset > 90){
         if(!hero.classList.contains('min')){
             hero.classList.add('min');
@@ -49,6 +51,12 @@ function onMove(){
         fadeAbout('out');
         fadeSocial('out');
         fadeSocialQoute('out');
+
+        if(selected_category !== null){
+            const selected_card = Array.from(selected_category.getElementsByClassName('fade_item'));
+            selected_card.map(card => { card.classList.remove('visible')})
+            selected_category.classList.remove('selected');
+        }
     }
 
     if(

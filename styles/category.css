@@ -76,6 +76,12 @@
 
 .category h3, .category h4{
     color: #3BA99C;
+    transition: 1s;
+}
+
+.category.selected h3{
+    font-size: 24px;
+    transition: 1s;
 }
 /* First child */
 .category:nth-child(1){

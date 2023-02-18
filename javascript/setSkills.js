@@ -25,12 +25,12 @@ function setSkills(){
     Object.entries(webdevelopment).forEach(skill => {
         const [language, width] = skill;
         const container = document.getElementById(language);
-        container.style.width = `${width}%`;
+        container.dataset.width = `${width}%`;
     })
 
     Object.entries(personal).forEach(skill => {
         const [subject, width] = skill;
         const container = document.getElementById(subject);
-        container.style.width = `${width}%`;
+        container.dataset.width = `${width}%`;
     })
 }

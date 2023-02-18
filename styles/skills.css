@@ -29,4 +29,6 @@
 
 .web .progress, .personal .progress{
     background: #ECF1FE;
+    transition: 1s;
+    transition-delay: 0.1s;
 }

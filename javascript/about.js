@@ -50,12 +50,19 @@ function selectCategory(target){
             cat.classList.add('selected');
             const fade_item = Array.from(cat.getElementsByClassName('card')[0].getElementsByClassName('fade_item'));
             
-            fade_item.forEach(item => {
-            })
+
+       
 
             let index = 0;
             const interval = setInterval( () => {
                 fade_item[index].classList.add('visible');
+
+                if(target.dataset.skill){
+                    const progressbar = Array.from(target.getElementsByClassName('progress'));
+                    progressbar.forEach(progress => {
+                        progress.style.width = progress.dataset.width;
+                    })
+                }
                 index++;
                 if(index > fade_item.length - 1){
                     clearInterval(interval);
@@ -81,6 +88,12 @@ function closeCategory(target){
             
     fade_item.forEach(item => {
         item.classList.remove('visible');
+        if(target.dataset.skill){
+            const progressbar = Array.from(target.getElementsByClassName('progress'));
+            progressbar.forEach(progress => {
+                progress.style.width = 0;
+            })
+        }
     })
 
     const deselected_categories = Array.from(document.getElementsByClassName('deselected'));
