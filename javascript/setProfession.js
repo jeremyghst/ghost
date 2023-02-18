@@ -16,7 +16,7 @@ function setProfession(){
         setTimeout(() => {
             profession_container.innerText = profession_array[i];
             profession_container.classList.remove('flash')
-        }, 200)
+        }, 500)
         if(i === profession_array.length -1){
             i = 0;
         } else {

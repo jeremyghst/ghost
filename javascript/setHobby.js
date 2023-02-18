@@ -15,7 +15,7 @@ function setHobby(){
         setTimeout(() => {
             hobby_container.innerText = hobby_array[i];
             hobby_container.classList.remove('flash')
-        }, 200)
+        }, 500)
 
         if(i === hobby_array.length -1){
             i = 0;
