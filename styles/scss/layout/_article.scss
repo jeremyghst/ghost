@@ -155,7 +155,7 @@
         color: $ghost_color_2;
         opacity: 0;
         transition: opacity $transition_scroll, color $transition_textColor;
-        margin: calc($base_margin * 3) 0 $base_margin;
+        margin: $base_big 0 $base_margin;
         grid-area: quote;
 
         &.visible{
@@ -181,7 +181,7 @@
             }
 
             #socials_slogan{
-                margin: calc($base_margin * 3) 0 $base_margin;
+                margin: $base_big 0 $base_margin;
                 justify-self: center;
             }
 

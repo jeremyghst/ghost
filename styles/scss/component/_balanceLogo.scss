@@ -1,5 +1,5 @@
 #balance{
-    height: 250px;
+    width: 250px;
     max-width: 60%;
     margin-top: calc($base_big / 2);
     grid-area: balance;
@@ -30,7 +30,7 @@
 
     @media all and (max-width: 799px) {
         &{
-            margin: calc($base_margin * 3) 0;
+            margin: $base_big 0;
             @include position(relative, auto, auto, auto, -100vw); 
             transition: left $transition_scroll;
         

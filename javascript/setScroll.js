@@ -1,12 +1,13 @@
 "use strict"
 
-window.addEventListener('scroll', onScroll);
-window.addEventListener('wheel', onScroll);
+window.addEventListener('scroll', setScroll);
+window.addEventListener('wheel', setScroll);
 
-function onScroll(){
+function setScroll(){
     const header = document.getElementById('header');
     const hero = document.getElementById('hero');
     
+    console.log(window.pageYOffset)
     if(window.pageYOffset > 90){
         if(!hero.classList.contains('min')){
             hero.classList.add('min');
@@ -28,8 +29,9 @@ function onScroll(){
     const scrollInElement = Array.from(document.querySelectorAll('.scrollIn:not(.visible)'));
 
     scrollInElement.forEach(element => {
+        const top = element.getBoundingClientRect().top;
         if(
-            (window.pageYOffset) > element.getBoundingClientRect().top
+            (window.pageYOffset) > top
         ){
             scrollIn(element);
         }

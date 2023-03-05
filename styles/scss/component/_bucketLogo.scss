@@ -2,10 +2,10 @@
     @include position(relative, auto, -100vw, auto, auto);
     grid-area: bucket;
     justify-self: flex-end;
-    height: 200px;
+    width: 250px;
     max-width: 60%;
     transition: right $transition_scroll;
-    margin-top: calc($base_margin * 3);
+    margin-top: $base_big;
 
     &.visible{
         @include position(relative, auto, 0, auto, auto);
@@ -29,7 +29,7 @@
 
     @media all and (max-width: 799px) {
         &{
-            margin: calc($base_margin * 3) 0;
+            margin: $base_big 0;
         }
     }
 }

@@ -1,6 +1,7 @@
 "use strict"
 
 window.onload = (event) => {
+    scrollUp();
     setNav();
     setHero();
     setInformation();
