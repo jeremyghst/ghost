@@ -1,23 +1,13 @@
 "use strict"
 
-const ghost = document.getElementById('ghost');
-const instagram = document.getElementById('instagram');
+const tag_gh = document.getElementById('tag_gh');
+const tag_logo = document.getElementById('tag_logo');
+const tag_st = document.getElementById('tag_st');
 
-const gh = document.getElementById('gh');
-const boo = document.getElementById('boo');
-const st = document.getElementById('st');
-
-const hero = [ghost, instagram, gh, boo, st];
-
-function resetHero(){
-    const animated = Array.from(document.getElementsByClassName('animate'));
-    animated.forEach(el => {
-        el.classList.remove('animate');
-    })
-}
+const hero = [tag_gh, tag_logo, tag_st];
 
 function setHero(){
-    hero.forEach(el => {
-        el.classList.add('animate');
+    hero.forEach(part => {
+        part.classList.add('visible');
     })
-};
+}

@@ -1,13 +1,11 @@
 #header{
-    width: 100%;
-    min-height: 100vh;
-    max-height: 100vh;
-    transition: 1s;
-    padding-top: 25px;
-}
+    width: $full_width;
+    min-height: calc(100vh - $base_padding);
+    max-height: calc(100vh - $base_padding);
+    transition: $transition_scroll;
 
-#header.min{
-    min-height: 0;
-    transition: 1s;
+    &.min{
+        min-height: 0;
+        transition: $transition_scroll;
+    }
 }
-

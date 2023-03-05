@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Simonetta&display=swap");
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -33,79 +34,34 @@
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-@keyframes balance {
+@keyframes rotate {
   0% {
-    transform: rotate(0);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
 }
-@keyframes leftEye_ghost {
-  0% {
-    cx: 261.226px;
-  }
-  50% {
-    cx: 298.226px;
-  }
-  100% {
-    cx: 261.2266px;
-  }
-}
-@keyframes rightEye_ghost {
-  0% {
-    cx: 461.195px;
-  }
-  50% {
-    cx: 498.1955px;
-  }
-  100% {
-    cx: 461.195px;
-  }
-}
-@keyframes leftEye_fox {
-  0% {
-    cx: 315.013px;
-  }
-  50% {
-    cx: 299.013px;
-  }
-  100% {
-    cx: 315.013px;
-  }
-}
-@keyframes rightEye_fox {
-  0% {
-    cx: 437.013px;
-  }
-  50% {
-    cx: 421.013px;
-  }
-  100% {
-    cx: 437.013px;
-  }
-}
 html {
-  min-width: 100vw;
-  width: 100vw;
-  max-width: 100vw;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  width: 100%;
-  min-height: 100%;
+  transition: background-color 2s;
   background-color: #3BA99C;
   color: #11122C;
-  padding: 0 25px;
-  transition: background-color 2s, color 2s;
+  overflow-x: hidden;
+  scrollbar-width: 0;
+  width: 100%;
+  max-width: 100%;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
 }
-
-body.locked {
-  height: 100vh;
-  overflow: hidden;
+html body {
+  width: 100%;
+  padding: 25px;
+  scrollbar-width: none;
+  padding: 25px;
+}
+html body.locked {
+  max-height: calc(100vh - 25px);
+  overflow-y: hidden;
 }
 
 * {
@@ -122,637 +78,396 @@ li {
   list-style: none;
 }
 
-.flex_row {
-  display: flex;
-  flex-direction: row;
-}
-
-body.foxMode {
-  background: #4B63AA;
-  color: #120802;
-  transition: background-color 2s, color 2s;
-}
-
-body.foxMode #header #ghost h1 {
-  height: 45px;
-}
-
-body.foxMode #hero_animation {
-  padding-left: 0;
-}
-
-body.foxMode #boo {
-  max-width: 35%;
-}
-
-body.foxMode #gh.animate {
-  left: 10%;
-}
-
-body.foxMode #st.animate {
-  right: 10%;
-}
-
-body.foxMode #greeting,
-body.foxMode #aboutIntro #slogan,
-body.foxMode #socialQuotes h3,
-body.foxMode #socialQuotes p,
-body.foxMode #footer p {
-  color: #2C3963;
-}
-
-body.foxMode .category, body.foxMode .social {
-  background-color: #2C3963;
-}
-
-body.foxMode .category h3,
-body.foxMode .category h4 {
-  color: #4B63AA;
-}
-
-body.foxMode .category a {
-  color: #EE6123;
-}
-
-body.foxMode .web .progressbar,
-body.foxMode .personal .progressbar {
-  background-color: #4B63AA;
-}
-
-body.foxMode .icon {
-  fill: #4B63AA;
-  stroke: #4B63AA;
-}
-
-body.foxMode #tag .icon {
-  fill: #541312;
-}
-
-body.foxMode #socialghost {
-  display: none;
-}
-
-body.foxMode #socialfox {
-  display: block;
-}
-
 #balance {
-  height: 200px;
-  animation: balance 10s linear infinite;
-  margin: 75px 0 0;
+  height: 250px;
+  max-width: 60%;
+  margin-top: 75px;
+  grid-area: balance;
+  animation: rotate 10s linear infinite;
   position: relative;
-  bottom: -100vh;
+  top: auto;
+  right: auto;
+  bottom: auto;
   left: -100vw;
-  transition: 1s;
-  opacity: 0;
+  transition: left 1s;
 }
-
 #balance.visible {
-  opacity: 1;
-  bottom: 0;
-  left: 0;
-  transition: 1s;
-}
-
-@media all and (max-width: 999px) {
-  #balance {
-    margin: 0;
-  }
-}
-@media all and (max-width: 650px) {
-  #balance {
-    margin: 25px auto 0;
-    max-width: 50%;
-  }
-}
-#socialghost, #socialfox {
-  height: 200px;
   position: relative;
-  bottom: -100vh;
-  margin-left: auto;
-  left: 100vw;
-  transition: 1s;
-  opacity: 0;
-}
-
-#socialfox {
-  display: none;
-}
-
-#socialghost.visible, #socialfox.visible {
-  opacity: 1;
-  bottom: 0;
+  top: auto;
+  right: auto;
+  bottom: auto;
   left: 0;
-  transition: 1s;
+  transition: left 1s;
 }
-
-#socialghost .leftEye {
-  animation: leftEye_ghost 5s ease-in-out infinite;
-}
-
-#socialghost .rightEye {
-  animation: rightEye_ghost 5s ease-in-out infinite;
-}
-
-#socialfox .leftEye {
-  animation: leftEye_fox 5s ease-in-out infinite;
-}
-
-#socialfox .rightEye {
-  animation: rightEye_fox 5s ease-in-out infinite;
-}
-
-@media all and (max-width: 850px) {
-  #socialghost, #socialfox {
-    margin: 0;
+@media all and (max-width: 1049px) {
+  #balance {
+    margin-top: 0;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 75px;
+    position: relative;
+    top: auto;
+    right: -100vw;
+    bottom: auto;
+    left: auto;
+    transition: right 1s;
+  }
+  #balance.visible {
+    position: relative;
+    top: auto;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    transition: right 1s;
   }
 }
-@media all and (max-width: 650px) {
-  #socialghost, #socialfox {
-    max-width: 50%;
+@media all and (max-width: 799px) {
+  #balance {
+    margin: 75px 0;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: -100vw;
+    transition: left 1s;
+  }
+  #balance.visible {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    transition: left 1s;
   }
 }
-@media all and (max-width: 570px) {
-  #socialghost, #socialfox {
-    margin: 0 auto;
+
+#bucket {
+  position: relative;
+  top: auto;
+  right: -100vw;
+  bottom: auto;
+  left: auto;
+  grid-area: bucket;
+  justify-self: flex-end;
+  height: 200px;
+  max-width: 60%;
+  transition: right 1s;
+  margin-top: 75px;
+}
+#bucket.visible {
+  position: relative;
+  top: auto;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  transition: right 1s;
+}
+@media all and (max-width: 1049px) {
+  #bucket {
+    margin-top: 0;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: -100vw;
+    transition: left 1s;
+  }
+  #bucket.visible {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    transition: left 1s;
   }
 }
-#about_categories {
+@media all and (max-width: 799px) {
+  #bucket {
+    margin: 75px 0;
+  }
+}
+
+#main_article {
+  width: 1000px;
+  max-width: 100%;
+  display: grid;
+  grid-template-areas: "greeting greeting" "intro information" "balance information" "quote bucket" "socials bucket";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, auto);
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+#main_article #greeting {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12.5px;
+  color: #256A62;
+  transition: color 1s;
+  grid-area: greeting;
+  opacity: 0;
+  transition: opacity 1s, color 1s;
+}
+#main_article #greeting.visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+#main_article #text {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 50px;
-  transition: 1s;
-  min-width: calc(100% - 370px);
-  width: calc(100% - 370px);
-  max-width: calc(100% - 370px);
-  position: relative;
-}
-
-.category {
-  position: relative;
-  background: transparent;
-  border-radius: 10px;
-  max-height: 150px;
-  overflow: hidden;
-  aspect-ratio: 1/1;
-  padding: 25px 25px 25px;
-  width: 150px;
-  max-width: 360px;
-  transition: 1s;
-}
-
-.category .card {
-  display: flex;
-  flex-direction: column;
+  grid-area: intro;
   gap: 25px;
-  opacity: 1;
-  transition: 1s;
 }
-
-.category .card .flex_col {
+#main_article #text #intro_slogan {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #256A62;
+  opacity: 0;
+  transition: opacity 1s, color 1s;
+}
+#main_article #text #intro_slogan.visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+#main_article #information {
+  grid-area: information;
+  background-color: #256A62;
+  border-radius: 10px;
+  transition: background-color 1s, right 1s;
+  padding: 25px 25px 50px;
+  position: relative;
+  top: auto;
+  right: -100vw;
+  bottom: auto;
+  left: auto;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+}
+#main_article #information h2 {
+  color: #3BA99C;
+  font-size: 1.5rem;
+  transition: color 1s;
+}
+#main_article #information .flex_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 5px;
   opacity: 0;
-  transition: 1s;
+  transition: opacity 1s;
 }
-
-.category .card .flex_col.visible {
-  opacity: 1;
-  transition: 1s;
+#main_article #information .flex_col h3 {
+  color: #3BA99C;
+  font-size: 1rem;
+  transition: color 1s;
 }
-
-.category h3 {
-  width: 200px;
-}
-
-.category h4 {
-  font-size: 18px;
-}
-
-.category.selected {
-  aspect-ratio: auto;
-  padding: 25px 25px 50px;
-  width: 100%;
-  max-width: 360px;
-  transition: 1s;
-}
-
-.category:not(.selected):hover {
-  animation: shake 0.8s infinite;
-}
-
-.category.selected:hover {
-  animation: shake 0.8s 1;
-}
-
-.category {
-  background-color: #266B63;
+#main_article #information .flex_col p, #main_article #information .flex_col a {
   color: #ECF1FE;
 }
-
-.category h3, .category h4 {
-  color: #3BA99C;
-  transition: 1s;
-}
-
-.category.selected h3 {
-  font-size: 24px;
-  transition: 1s;
-}
-
-/* First child */
-.category:nth-child(1) {
-  left: -100vw;
+#main_article #information .flex_col #profession, #main_article #information .flex_col #hobby {
   opacity: 0;
 }
-
-.category:nth-child(1) a {
-  color: #BFCFFA;
-  margin-right: auto;
+#main_article #information .flex_col #profession.visible, #main_article #information .flex_col #hobby.visible {
+  opacity: 1;
+  transition: opacity 2s;
 }
-
-.category:nth-child(1) a:hover {
+#main_article #information .flex_col a:hover {
   animation: shake 0.8s infinite;
 }
-
-.category:nth-child(1).selected {
-  max-height: 524px;
-}
-
-/* Second child */
-.category:nth-child(2) {
-  opacity: 0;
-  bottom: -100vh;
-}
-
-.category:nth-child(2).selected {
-  max-height: 502px;
-}
-
-/* Third child */
-.category:nth-child(3) {
-  left: 100vw;
-  opacity: 0;
-}
-
-.category:nth-child(3).selected {
-  max-height: 431px;
-}
-
-/* Fade in */
-.category.visible {
-  bottom: 0;
-  left: 0;
+#main_article #information .flex_col.visible {
   opacity: 1;
-  transition: 1s;
+  transition: opacity 1s;
 }
-
-@media all and (max-width: 999px) {
-  #about_categories {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-@media all and (max-width: 650px) {
-  #about_categories {
-    gap: 25px;
-    justify-content: space-between;
-  }
-  .category {
-    padding: 25px;
-  }
-  .category.selected {
-    flex-shrink: 0;
-  }
-}
-@media all and (max-width: 570px) {
-  #about_categories.selected {
-    gap: 0;
-    transition: 1s;
-  }
-  .category.selected {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-  }
-  .category.deselected {
-    padding: 0;
-    width: 0%;
-    height: 0%;
-  }
-  .category.deselected h3 {
-    opacity: 0;
-    transition: 0.5s;
-  }
-}
-@media all and (max-width: 350px) {
-  .category {
-    padding: 10px;
-  }
-}
-#profession, #hobby {
-  opacity: 1;
-  transition: 1s;
-}
-
-#profession.flash, #hobby.flash {
-  opacity: 0;
-  transition: 1s;
-}
-
-#greeting {
-  font-weight: bold;
-  color: #266B63;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-#aboutIntro {
-  width: 370px;
-  max-width: 370px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 25px;
-}
-
-#intro_text {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-#aboutIntro p {
-  font-size: 18px;
-  text-align: justify;
-}
-
-#aboutIntro #slogan {
-  font-weight: bold;
-  color: #266B63;
-  font-size: 30px;
-  font-style: italic;
-}
-
-@media all and (max-width: 999px) {
-  #aboutIntro {
-    width: 100%;
-    max-width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #intro_text {
-    align-items: flex-start;
-    width: 100%;
-    max-width: 100%;
-  }
-}
-@media all and (max-width: 650px) {
-  #aboutIntro {
-    width: 100%;
-    max-width: 100%;
-    flex-direction: column;
-  }
-}
-.flex_skill {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.flex_skill p {
-  min-width: 120px;
-  width: 120px;
-  max-width: 120px;
-}
-
-.flex_skill .progressbar {
-  width: 100%;
-  height: 18px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.web .progressbar, .personal .progressbar {
-  background: #3BA99C;
-}
-
-.flex_skill .progressbar .progress {
-  height: 100%;
-  border-radius: 3px;
-  width: 0%;
-}
-
-.web .progress, .personal .progress {
-  background: #ECF1FE;
-  transition: 1s;
-  transition-delay: 0.1s;
-}
-
-#socialIntro {
-  width: 320px;
-  max-width: 320px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 50px;
-}
-
-#socialQuotes {
-  opacity: 0;
-  transition: 1s;
-}
-
-#socialQuotes.visible {
-  opacity: 1;
-  transition: 1s;
-}
-
-#socialQuotes h3, #socialQuotes p {
-  font-weight: bold;
-  color: #266B63;
-  font-size: 30px;
-  font-style: italic;
-}
-
-#socialQuotes h3 {
-  margin-bottom: 10px;
-}
-
-@media all and (max-width: 850px) {
-  #socialIntro {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 100%;
-    justify-content: space-between;
-  }
-}
-@media all and (max-width: 570px) {
-  #socialIntro {
-    display: flex;
-    flex-direction: column;
-  }
-}
-#socialmedia {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 50px;
+#main_article #information.visible {
   position: relative;
-  transition: 1s;
-  transition-delay: 1s;
+  top: auto;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  transition: right 1s;
 }
-
-#socialcontainer {
+#main_article #social_container {
+  grid-area: socials;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  min-width: calc(100% - 370px);
-  width: calc(100% - 370px);
-  max-width: calc(100% - 370px);
-  gap: 50px;
+  gap: 25px;
 }
-
-.social {
-  position: relative;
-  background: transparent;
-  border-radius: 10px;
-  overflow: hidden;
-  aspect-ratio: 1/1;
-  padding: 25px 25px 25px;
+#main_article #social_container .social {
+  background-color: #256A62;
+  height: 150px;
   width: 150px;
-  max-height: 150px;
-  transition: 1s;
-  background-color: #266B63;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.5s;
+  padding: 7.5%;
+  border-radius: 10px;
+  border: none;
+  opacity: 0;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: -100vw;
+  transition: left 1s, opacity 1s, background-color 1s;
 }
-
-.social svg {
-  height: 50px;
+#main_article #social_container .social img {
+  height: 100%;
   max-width: 100%;
-  opacity: 30%;
-  transition: 0.5s;
+  opacity: 0.6;
+  transition: opacity 1s;
 }
-
-.social:hover {
+#main_article #social_container .social:hover {
   animation: shake 0.8s infinite;
 }
-
-.social:hover svg {
-  opacity: 100%;
-  transition: 0.5s;
-}
-
-/* First child */
-.social:nth-child(1) {
-  left: -100vw;
-  opacity: 0;
-}
-
-/* Second child */
-.social:nth-child(2) {
-  opacity: 0;
-  bottom: -100vh;
-}
-
-/* Third child */
-.social:nth-child(3) {
-  left: 100vw;
-  opacity: 0;
-}
-
-/* Fade in */
-.social.visible {
-  bottom: 0;
-  left: 0;
+#main_article #social_container .social:hover img {
   opacity: 1;
-  transition: 1s;
+  transition: opacity 1s;
 }
-
-@media all and (max-width: 850px) {
-  #socialmedia {
-    flex-direction: column-reverse;
-    align-items: center;
+#main_article #social_container .social.visible {
+  opacity: 1;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  transition: left 1s, opacity 1s;
+}
+#main_article #socials_slogan {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #256A62;
+  opacity: 0;
+  transition: opacity 1s, color 1s;
+  margin: 75px 0 25px;
+  grid-area: quote;
+}
+#main_article #socials_slogan.visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+@media all and (max-width: 1049px) {
+  #main_article {
+    grid-template-areas: "greeting greeting" "intro balance" "bucket information" "bucket information" "quote quote" "socials socials";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
   }
-  #socialcontainer {
-    justify-content: flex-start;
+  #main_article #text {
+    margin-bottom: 75px;
+  }
+  #main_article #socials_slogan {
+    margin: 75px 0 25px;
+    justify-self: center;
+  }
+  #main_article #social_container {
+    justify-self: center;
+    gap: 12.5px;
+  }
+}
+@media all and (max-width: 799px) {
+  #main_article {
+    grid-template-areas: "greeting" "intro" "balance" "information" "bucket" "quote" "socials";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, auto);
+  }
+  #main_article #text {
+    margin-bottom: 0;
+  }
+  #main_article #information {
+    width: 475px;
+    justify-self: center;
+  }
+  #main_article #socials_slogan {
+    margin-top: 0;
+    justify-self: center;
+  }
+  #main_article #social_container {
+    justify-self: center;
+  }
+  #main_article #social_container .social {
+    position: relative;
+    top: auto;
+    right: -100vw;
+    bottom: auto;
+    left: auto;
+    transition: right 1s, opacity 1s, background-color 1s;
+  }
+  #main_article #social_container .social.visible {
+    position: relative;
+    top: auto;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    transition: right 1s, opacity 1s;
+  }
+}
+@media all and (max-width: 549px) {
+  #main_article #information {
     width: 100%;
-    max-width: 100%;
   }
-  .social {
-    padding: 15px;
+  #main_article #social_container {
+    width: 100%;
   }
-}
-@media all and (max-width: 650px) {
-  #socialcontainer {
-    gap: 25px;
-    justify-content: space-between;
+  #main_article #social_container .social {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
   }
-}
-@media all and (max-width: 450px) {
-  .social svg {
-    height: 30px;
-  }
-}
-#about_container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 50px;
-  align-items: flex-start;
-  min-width: 100%;
-  width: 100%;
-  max-width: 100%;
-  padding-bottom: 25px;
 }
 
-@media all and (max-width: 999px) {
-  #about_container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 #footer {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 25px;
-  padding: 150px 0 25px;
+  padding-top: 300px;
 }
-
-#footer #tag {
-  height: 25px;
+#footer #footer_tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+  transition: opacity 1s;
 }
-
-#footer #tag:hover {
+#footer #footer_tag:hover {
   animation: shake 0.8s infinite;
+  opacity: 1;
+  transition: opacity 1s;
 }
-
+#footer #footer_tag svg {
+  height: 25px;
+  fill: #11122C;
+  transition: fill 1s ease-out;
+}
 #footer p {
   width: 100%;
   color: #266B63;
+  opacity: 0;
+  transition: opacity 1s, color 1s;
 }
-
 #footer p:first-child {
   text-align: end;
+}
+#footer p.visible {
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 #header {
   width: 100%;
-  min-height: 100vh;
-  max-height: 100vh;
+  min-height: calc(100vh - 25px);
+  max-height: calc(100vh - 25px);
   transition: 1s;
-  padding-top: 25px;
 }
-
 #header.min {
   min-height: 0;
   transition: 1s;
@@ -761,146 +476,181 @@ body.foxMode #socialfox {
 #hero {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 70px);
-  max-height: calc(100vh - 70px);
-  transition: 1s;
-  padding: 0 0 150px;
-}
-
-#hero.min {
-  min-height: 0px;
+  align-items: center;
+  min-height: calc(100vh - 25px - 80px);
+  max-height: calc(100vh - 25px - 80px);
   transition: 1s;
 }
-
-#hero_animation {
-  width: 1000px;
-  max-width: 100%;
+#hero #hero_container {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
-  padding-left: 10%;
-}
-
-#hero img {
+  align-items: center;
   position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 800px;
+  max-width: 90%;
+  aspect-ratio: 2/1;
+  margin-bottom: 160px;
 }
-
-#gh {
-  max-width: 30%;
-  bottom: 100vh;
-  left: -100vw;
+#hero #hero_container .tag_part {
+  height: 75%;
   opacity: 0;
-  z-index: -1;
+  fill: #11122C;
+  transition: fill 1s ease-out;
 }
-
-#gh.animate {
-  bottom: 0;
-  left: 5%;
-  opacity: 1;
-  transition: 1s ease-out;
+#hero #hero_container .tag_part#tag_gh {
+  position: absolute;
+  top: -100vh;
+  right: auto;
+  bottom: auto;
+  left: -100vw;
+  z-index: 1;
 }
-
-#boo {
+#hero #hero_container .tag_part#tag_gh.visible {
+  position: absolute;
+  top: 12.5%;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  transition: left 1s ease-out, top 1s ease-out, opacity 1s ease-out;
+}
+#hero #hero_container .tag_part#tag_st {
+  position: absolute;
+  top: auto;
+  right: -100vw;
+  bottom: -100vh;
+  left: auto;
+  z-index: 1;
+}
+#hero #hero_container .tag_part#tag_st.visible {
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 12.5%;
+  left: auto;
+  transition: right 1s ease-out, bottom 1s ease-out, opacity 1s ease-out;
+}
+#hero #hero_container .tag_part.visible {
+  opacity: 0.6;
+}
+#hero #hero_container #tag_logo {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  height: 100%;
+  z-index: 2;
   opacity: 0;
   transform: rotate(-360deg);
-  opacity: 0;
-  max-width: 50%;
 }
-
-#boo.animate {
+#hero #hero_container #tag_logo.visible {
   opacity: 1;
   transform: rotate(0deg);
-  transition: 1s ease-out;
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
-
-#st {
-  max-width: 30%;
-  z-index: 1;
-  top: 100vh;
-  right: -100vw;
-  opacity: 0;
+#hero #hero_container #tag_logo.visible:hover {
+  animation: shake 0.8s infinite;
 }
-
-#st.animate {
-  top: 0;
-  right: 15%;
+#hero #hero_container #tag_logo.visible:hover ~ svg {
   opacity: 1;
-  transition: 1s ease-out;
+}
+#hero.min {
+  min-height: 0;
+  transition: 1s;
 }
 
-main {
+#main {
   display: flex;
   flex-direction: column;
-  gap: 225px;
-  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 300px;
+  width: 100%;
 }
 
-main article {
-  width: 1000px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-@media all and (max-width: 650px) {
-  main {
-    gap: 150px;
-  }
-}
 #header_nav {
   width: 100%;
-  height: 45px;
-}
-
-#header_nav ul {
-  width: 100%;
+  height: 80px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: flex-start;
 }
-
-#header #ghost h1 {
+#header_nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+#header_nav ul li button {
+  border: none;
+}
+#header_nav ul li button:hover {
+  animation: shake 0.8s infinite;
+}
+#header_nav ul.visible {
+  transition: 1s ease-out;
+}
+#header_nav ul#nav_switch {
   position: relative;
-  height: 35px;
-  opacity: 0;
+  top: auto;
   right: 100px;
+  bottom: auto;
+  left: auto;
 }
-
-#header #ghost.animate h1 {
-  right: 0;
-  opacity: 1;
-  transition: 1s ease-out;
+#header_nav ul#nav_switch li .updateBtn {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
 }
-
-#header_nav #ghost img {
-  height: 100%;
+#header_nav ul#nav_switch li:nth-child(1) .updateBtn {
+  background-color: #256A62;
 }
-
-#header_nav #ghost img:hover {
-  animation: shake 0.8s infinite;
+#header_nav ul#nav_switch li:nth-child(2) .updateBtn {
+  background-color: #2C3963;
 }
-
-#header_nav #instagram {
+#header_nav ul#nav_switch li:nth-child(3) .updateBtn {
+  background-color: #B92A27;
+}
+#header_nav ul#nav_switch.visible {
   position: relative;
-  border: none;
+  top: auto;
+  right: 0;
+  bottom: auto;
+  left: auto;
+}
+#header_nav ul#nav_social {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
   left: 100px;
-  opacity: 0;
 }
-
-#header_nav #instagram.animate {
-  left: 0;
+#header_nav ul#nav_social li button {
+  background-color: transparent;
+  height: 30px;
+}
+#header_nav ul#nav_social li button img {
+  height: 100%;
+  opacity: 0.6;
+  transition: opacity 1s;
+}
+#header_nav ul#nav_social li button:hover img {
   opacity: 1;
-  transition: 1s ease-out;
+  transition: opacity 1s;
 }
-
-#header_nav #instagram {
-  background: transparent;
-  border: none;
-}
-
-#header_nav #instagram:hover {
-  animation: shake 0.8s infinite;
+#header_nav ul#nav_social.visible {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: 0;
 }/*# sourceMappingURL=main.css.map */

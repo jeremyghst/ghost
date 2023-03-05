@@ -4,22 +4,39 @@
     align-items: center;
     justify-content: center;
     gap: 25px;
-    padding: 150px 0 25px;
-}
+    padding-top: calc($base_big * 2);
 
-#footer #tag{
-    height: 25px;
-}
+    #footer_tag{
+        @include flex(row, center, center);
+        opacity: 0.6;
+        transition: opacity $transition_hover;
 
-#footer #tag:hover{
-    animation: shake 0.8s infinite;
-}
+        &:hover{
+            animation: shake 0.8s infinite;
+            opacity: 1;
+            transition: opacity $transition_hover;
+        }
 
-#footer p{
-    width: 100%;
-    color: #266B63;
-}
+        svg{
+            height: 25px;
+            fill: $ghost_color_3;
+            transition: fill $transition_hero;
+        }
+    }
 
-#footer p:first-child{
-    text-align: end; 
+    p{
+        width: 100%;
+        color: #266B63;
+        opacity: 0;
+        transition: opacity $transition_scroll, color $transition_textColor;
+
+        &:first-child{
+            text-align: end; 
+        }
+
+        &.visible{
+            opacity: 1;
+            transition: opacity $transition_scroll;
+        }
+    }
 }

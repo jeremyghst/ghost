@@ -1,30 +1,43 @@
 #balance{
-    height: 200px;
-    animation: balance 10s linear infinite;
-    margin: 75px 0 0;
-    position: relative;
-    bottom: -100vh;
-    left: -100vw;
-    transition: 1s;
-    opacity: 0;
-}
+    height: 250px;
+    max-width: 60%;
+    margin-top: calc($base_big / 2);
+    grid-area: balance;
+    animation: rotate 10s linear infinite;
+    @include position(relative, auto, auto, auto, -100vw); 
+    transition: left $transition_scroll;
 
-#balance.visible{
-    opacity: 1;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-}
-
-@media all and (max-width: 999px) {
-    #balance{
-        margin: 0;
+    &.visible{
+        @include position(relative, auto, auto, auto, 0); 
+        transition: left $transition_scroll;
     }
-}
 
-@media all and (max-width: 650px) {
-    #balance{
-        margin: 25px auto 0;
-        max-width: 50%;
+    @media all and (max-width: 1049px) {
+        &{
+            margin-top: 0;
+            align-self: center;
+            justify-self: center;
+            margin-bottom: calc($base_margin * 3);
+            @include position(relative, auto, -100vw, auto, auto);
+            transition: right $transition_scroll;
+
+            &.visible{
+                @include position(relative, auto, 0, auto, auto);
+                transition: right $transition_scroll;
+            }
+        }
+    }
+
+    @media all and (max-width: 799px) {
+        &{
+            margin: calc($base_margin * 3) 0;
+            @include position(relative, auto, auto, auto, -100vw); 
+            transition: left $transition_scroll;
+        
+            &.visible{
+                @include position(relative, auto, auto, auto, 0); 
+                transition: left $transition_scroll;
+            }
+        }
     }
 }

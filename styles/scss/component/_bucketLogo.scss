@@ -1,55 +1,35 @@
-#socialghost, #socialfox{
+#bucket{
+    @include position(relative, auto, -100vw, auto, auto);
+    grid-area: bucket;
+    justify-self: flex-end;
     height: 200px;
-    position: relative;
-    bottom: -100vh;
-    margin-left: auto;
-    left: 100vw;
-    transition: 1s;
-    opacity: 0;
-}
+    max-width: 60%;
+    transition: right $transition_scroll;
+    margin-top: calc($base_margin * 3);
 
-#socialfox{
-    display: none;
-}
-
-#socialghost.visible, #socialfox.visible{
-    opacity: 1;
-    bottom: 0;
-    left: 0;
-    transition: 1s;
-}
-
-
-#socialghost .leftEye{
-    animation: leftEye_ghost 5s ease-in-out infinite;
-}
-
-#socialghost .rightEye{
-    animation: rightEye_ghost 5s ease-in-out infinite;  
-}
-
-#socialfox .leftEye{
-    animation: leftEye_fox 5s ease-in-out infinite;
-}
-
-#socialfox .rightEye{
-    animation: rightEye_fox 5s ease-in-out infinite;  
-}
-
-@media all and (max-width: 850px) {
-    #socialghost, #socialfox{
-        margin: 0;
+    &.visible{
+        @include position(relative, auto, 0, auto, auto);
+        transition: right $transition_scroll;
     }
-}
 
-@media all and (max-width: 650px) {
-    #socialghost, #socialfox{
-        max-width: 50%;
+    @media all and (max-width: 1049px) {
+        &{
+            margin-top: 0;
+            align-self: center;
+            justify-self: center;
+            @include position(relative, auto, auto, auto, -100vw);
+            transition: left $transition_scroll;
+
+            &.visible{
+                @include position(relative, auto, auto, auto, 0);
+                transition: left $transition_scroll;
+            }
+        }
     }
-}
 
-@media all and (max-width: 570px){
-    #socialghost, #socialfox{
-        margin: 0 auto;
+    @media all and (max-width: 799px) {
+        &{
+            margin: calc($base_margin * 3) 0;
+        }
     }
 }

@@ -1,69 +1,74 @@
 #hero{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 70px);
-    max-height: calc(100vh - 70px);
-    transition: 1s;
-    padding: 0 0 150px;
-}
+    @include flex(row, center, center);
+    min-height: calc(100vh - $base_padding - $height_header_nav);
+    max-height: calc(100vh - $base_padding - $height_header_nav);
+    transition: $transition_scroll;
 
-#hero.min{
-    min-height: 0px;
-    transition: 1s;
-}
+    #hero_container{
+        @include flex(row, center, center);
+        @include position(relative, auto, auto, auto, auto);
 
-#hero_animation{
-    width: 1000px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10%;
-}
-#hero img{
-    position: relative;
-}
+        width: $hero_width;
+        max-width: 90%;
+        aspect-ratio: 2/1;
+        margin-bottom: calc($height_header_nav * 2);
 
-#gh{
-    max-width: 30%;
-    bottom: 100vh;
-    left: -100vw;
-    opacity: 0;
-    z-index: -1;
-}
+        .tag_part{
+            height: 75%;
+            opacity: 0;
+            fill: $ghost_color_3;
+            transition: fill $transition_hero;
 
-#gh.animate{
-    bottom: 0;
-    left: 5%;
-    opacity: 1;
-    transition: 1s ease-out;
-}
+            &#tag_gh{
+                @include position(absolute, -100vh, auto, auto, -100vw);
+                z-index: 1;
 
-#boo{
-    opacity: 0;
-    transform: rotate(-360deg);
-    opacity: 0;
-    max-width: 50%;
-}
-#boo.animate{
-    opacity: 1;
-    transform: rotate(0deg);
-    transition: 1s ease-out;
-}
+                &.visible{
+                    @include position(absolute, 12.5%, auto, auto, 0);
+                    transition: left $transition_hero, top $transition_hero, opacity $transition_hero;
+                }
+            }
+            &#tag_st{
+                @include position(absolute, auto, -100vw, -100vh, auto);
+                z-index: 1;
+                
+                &.visible{
+                    @include position(absolute, auto, 0, 12.5%, auto);
+                    transition: right $transition_hero, bottom $transition_hero, opacity $transition_hero;
+                }
+            }
 
-#st{
-    max-width: 30%;
-    z-index: 1;
-    top: 100vh;
-    right: -100vw;
-    opacity: 0;
-}
-#st.animate{
-    top: 0;
-    right: 15%;
-    opacity: 1;
-    transition: 1s ease-out;
+
+            &.visible{
+                opacity: 0.6;
+            }
+        }
+
+        #tag_logo{
+            @include position(relative, auto, auto, auto, auto);
+            height: 100%;
+            z-index: 2;
+            opacity: 0;
+            transform: rotate(-360deg);
+
+            &.visible{
+                opacity: 1;
+                transform: rotate(0deg);
+                transition: transform $transition_hero, opacity $transition_hero;
+
+                &:hover{
+                    animation: shake 0.8s infinite;
+
+                    & ~ svg{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.min{
+        min-height: 0;
+        transition: $transition_scroll;
+    }
 }

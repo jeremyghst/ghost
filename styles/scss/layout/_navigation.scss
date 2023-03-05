@@ -1,55 +1,84 @@
 #header_nav{
-    width: 100%;
-    height: 45px;
-}
-
-#header_nav ul{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-}
+    width: $full_width;
+    height: $height_header_nav;
+    @include flex(row, space-between, flex-start);
 
 
-#header #ghost h1{
-    position: relative;
-    height: 35px;
-    opacity: 0;
-    right: 100px;
-}
+    ul{
+        @include flex(column, flex-start, flex-start);
+        gap: 10px;
 
-#header #ghost.animate h1{
-    right: 0;
-    opacity: 1;
-    transition: 1s ease-out;
-}
+    
 
-#header_nav #ghost img{
-    height: 100%;
-}
+        li{
+            button{
+                border: none;
+                &:hover{                    
+                    animation: shake 0.8s infinite;
+                }
+            }
+        }
 
-#header_nav #ghost img:hover{
-    animation: shake 0.8s infinite;
-}
+        &.visible{
+            transition: $transition_nav;
+        }
 
-#header_nav #instagram{
-    position: relative;
-    border: none;
-    left: 100px;
-    opacity: 0;
-}
-#header_nav #instagram.animate{
-    left: 0;
-    opacity: 1;
-    transition: 1s ease-out;
-}
+        &#nav_switch{
+            @include position(relative, auto, 100px, auto, auto);
+    
+    
+            li{
+                .updateBtn{
+                    display: block;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                }
+    
+                &:nth-child(1) .updateBtn{
+                    background-color: $ghost_color_2;
+                }
+    
+                &:nth-child(2) .updateBtn{
+                    background-color: $fox_color_2;
+                }
+    
+                &:nth-child(3) .updateBtn{
+                    background-color: $tiger_color_2;
+                }
+            }
+    
+            &.visible{
+                @include position(relative, auto, 0, auto, auto);
+            }
+        }
 
-#header_nav #instagram{
-    background: transparent;
-    border: none;
-}
+        &#nav_social{
+            @include position(relative, auto, auto, auto, 100px);
 
-#header_nav #instagram:hover{
-    animation: shake 0.8s infinite;
+            li{
+                button{
+                    background-color: transparent;
+                    height: 30px;
+
+                    img{
+                        height: 100%;
+                        opacity: 0.6;
+                        transition: opacity $transition_hover;
+                    }
+
+                    &:hover{                    
+                        img{
+                            opacity: 1;
+                            transition: opacity $transition_hover;
+                        }
+                    }
+                }
+            }
+
+            &.visible{
+                @include position(relative, auto, auto, auto, 0);
+            }
+        }
+    }
 }

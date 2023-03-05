@@ -1,17 +1,5 @@
-main{
-    display: flex;
-    flex-direction: column;
-    gap: 225px;
-    overflow: hidden;
-}
-main article{
-    width: 1000px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-@media all and (max-width: 650px) {    
-    main{
-        gap: 150px;
-    }
+#main{
+    @include flex(column, flex-start, center);
+    gap: calc($base_big * 2);
+    width: 100%;
 }
