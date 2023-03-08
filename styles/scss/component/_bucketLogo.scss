@@ -30,6 +30,7 @@
     @media all and (max-width: 799px) {
         &{
             margin: $base_big 0;
+            max-height: $base_big;
         }
     }
 }

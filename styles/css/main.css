@@ -185,6 +185,7 @@ li {
 @media all and (max-width: 799px) {
   #bucket {
     margin: 150px 0;
+    max-height: 150px;
   }
 }
 
