@@ -29,8 +29,10 @@ function setScroll(){
 
     scrollInElement.forEach(element => {
         const top = element.getBoundingClientRect().top;
+        const bottom = element.getBoundingClientRect().bottom;
+
         if(
-            (window.pageYOffset) > top
+            top < window.innerHeight && bottom >= 0
         ){
             scrollIn(element);
         }
