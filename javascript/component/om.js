@@ -1,6 +1,6 @@
 const component_om = `
 <h2 class="information_heading">
-    web.
+    om.
 </h2>
 <div class="flex_col information_fadeIn">
     <h3 class="information_heading">heart</h3>
