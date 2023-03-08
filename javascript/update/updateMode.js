@@ -68,11 +68,17 @@ updateBtn.forEach(btn => {
 })
 
 function updateMode(e){
-    resetAnimation()
-
     const target = e.target.closest('.updateBtn');
     const mode = target.dataset.mode;
-    current_mode = mode; 
+    current_mode = mode;
+
+    localStorage.setItem('ghostdevelopment', current_mode);
+
+    setMode(current_mode)
+}
+
+function setMode(mode){
+    resetAnimation()
     
     const target_mode = modeObj.find(obj => obj.id === mode);
 
