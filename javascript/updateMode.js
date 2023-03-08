@@ -14,7 +14,6 @@ const elementObj = {
 
     balance: document.getElementById('balance'),
     information: document.getElementById('information'),
-    information_heading: Array.from(document.getElementsByClassName('information_heading')),
 
 
     footer_tag_gh: document.getElementById('footer_tag_gh'),
@@ -105,7 +104,8 @@ function updateMode(e){
     elementObj.copyright.style.color = target_mode.color_2;
     elementObj.copyrightYear.style.color = target_mode.color_2;
 
-    elementObj.information_heading.forEach(heading => {
+    const information_heading = Array.from(document.getElementsByClassName('information_heading'));
+    information_heading.forEach(heading => {
         console.log(heading)
         heading.style.color = target_mode.color_1;
     })
