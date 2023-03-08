@@ -123,7 +123,7 @@ function updateMode(e){
 }
 
 function resetAnimation(){
-    scrollUp();
+    updateScroll();
     document.body.classList.add('locked');
 
     const visibleElement = Array.from(document.getElementsByClassName('visible'));

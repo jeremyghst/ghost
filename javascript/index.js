@@ -3,7 +3,7 @@
 let current_mode = 'ghost';
 
 window.onload = (event) => {
-    scrollUp();
+    updateScroll();
     setNav();
     setHero();
     
