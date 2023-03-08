@@ -7,13 +7,13 @@ const component_om = `
     <div class="flex_skill">
         <h4>self-love:</h4>
         <div class="progressbar">
-            <div class="progress" id="html"></div>
+            <div class="progress" data-skill="selflove"></div>
         </div>
     </div>
     <div class="flex_skill">
         <h4>love others:</h4>
         <div class="progressbar">
-            <div class="progress" id="css"></div>
+            <div class="progress" data-skill="loveothers"></div>
         </div>
     </div>
 </div>
@@ -22,19 +22,19 @@ const component_om = `
     <div class="flex_skill">
         <h4>p.m.a:</h4>
         <div class="progressbar">
-            <div class="progress" id="scss"></div>
+            <div class="progress" data-skill="pma"></div>
         </div>
     </div>
     <div class="flex_skill">
         <h4>reflection:</h4>
         <div class="progressbar">
-            <div class="progress" id="javascript"></div>
+            <div class="progress" data-skill="reflection"></div>
         </div>
     </div>
     <div class="flex_skill">
         <h4>meditation:</h4>
         <div class="progressbar">
-            <div class="progress" id="reactjs"></div>
+            <div class="progress" data-skill="meditation"></div>
         </div>
     </div>
 </div>
@@ -43,19 +43,19 @@ const component_om = `
     <div class="flex_skill">
         <h4>exercise:</h4>
         <div class="progressbar">
-            <div class="progress" id="mysql"></div>
+            <div class="progress" data-skill="exercise"></div>
         </div>
     </div>
     <div class="flex_skill">
         <h4>acupressure:</h4>
         <div class="progressbar">
-            <div class="progress" id="acupressure"></div>
+            <div class="progress" data-skill="acupressure"></div>
         </div>
     </div>
     <div class="flex_skill">
-        <h4>stretching:</h4>
+        <h4>yoga:</h4>
         <div class="progressbar">
-            <div class="progress" id="stretching"></div>
+            <div class="progress" data-skill="yoga"></div>
         </div>
     </div>
 </div>

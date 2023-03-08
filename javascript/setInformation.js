@@ -7,6 +7,18 @@ function fadeInInformation(){
     const fadeInterval = setInterval(() => {
         information_fadeIn[i].classList.add('visible');
 
+            switch(current_mode){
+                case "ghost":
+                    break;
+                case "fox":
+                    setSkillInformation(web_information, information_fadeIn[i]);
+                    break;
+                case "tiger":
+                    setSkillInformation(om_information, information_fadeIn[i]);
+                default:
+                    break;
+            }
+
         if(i < information_fadeIn.length - 1){
             i++
         } else {

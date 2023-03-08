@@ -1,6 +1,6 @@
 "use strict"
 
-const information = 
+const me_information = 
 [
     {
         id: 'hobby',
@@ -13,7 +13,7 @@ const information =
 ]
 function setMeInformation(){
 
-    information.forEach(info => {        
+    me_information.forEach(info => {        
         let i = 1;
 
         const container = document.getElementById(info.id);

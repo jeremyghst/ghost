@@ -110,6 +110,11 @@ function updateMode(e){
         heading.style.color = target_mode.color_1;
     })
 
+    const skills = Array.from(document.getElementsByClassName('progress'));
+    skills.forEach(skill => {
+        skill.style.backgroundColor = target_mode.color_1;
+    })
+
     elementObj.bucket.src = `./assets/logo/bucket/${target_mode.logo}.svg`;
 
     elementObj.social.forEach(social => {

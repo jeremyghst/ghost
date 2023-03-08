@@ -7,13 +7,13 @@ const component_web = `
     <div class="flex_skill">
         <h4>html:</h4>
         <div class="progressbar">
-            <div class="progress" id="html"></div>
+            <div class="progress" data-skill="html"></div>
         </div>
     </div>
     <div class="flex_skill">
         <h4>css:</h4>
         <div class="progressbar">
-            <div class="progress" id="css"></div>
+            <div class="progress" data-skill="css"></div>
         </div>
     </div>
     </div>
@@ -22,19 +22,19 @@ const component_web = `
     <div class="flex_skill">
         <h4>scss:</h4>
         <div class="progressbar">
-            <div class="progress" id="scss"></div>
+            <div class="progress" data-skill="scss"></div>
         </div>
     </div>
     <div class="flex_skill">
         <h4>javascript:</h4>
         <div class="progressbar">
-            <div class="progress" id="javascript"></div>
+            <div class="progress" data-skill="javascript"></div>
         </div>
     </div>
     <div class="flex_skill">
         <h4>reactjs:</h4>
         <div class="progressbar">
-            <div class="progress" id="reactjs"></div>
+            <div class="progress" data-skill="reactjs"></div>
         </div>
     </div>
     </div>
@@ -43,19 +43,19 @@ const component_web = `
     <div class="flex_skill">
         <h4>mysql:</h4>
         <div class="progressbar">
-            <div class="progress" id="mysql"></div>
+            <div class="progress" data-skill="mysql"></div>
         </div>
     </div>
     <div class="flex_skill">
         <h4>php:</h4>
         <div class="progressbar">
-            <div class="progress" id="php"></div>
+            <div class="progress" data-skill="php"></div>
         </div>
     </div>
     <div class="flex_skill">
         <h4>laravel:</h4>
         <div class="progressbar">
-            <div class="progress" id="laravel"></div>
+            <div class="progress" data-skill="laravel"></div>
         </div>
     </div>
     </div>
@@ -64,7 +64,7 @@ const component_web = `
     <div class="flex_skill">
         <h4>logo's:</h4>
         <div class="progressbar">
-            <div class="progress" id="logo"></div>
+            <div class="progress" data-skill="logo"></div>
         </div>
     </div>
 </div>

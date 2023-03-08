@@ -57,8 +57,6 @@
                 transition: transform $transition_hero, opacity $transition_hero;
 
                 &:hover{
-                    animation: shake 0.8s infinite;
-
                     & ~ svg{
                         opacity: 1;
                     }

@@ -49,9 +49,17 @@ function scrollIn(element){
             case "information":
                 fadeInInformation();
 
-                if(current_mode === 'ghost'){
-                    setMeInformation();
-                    setAge();
+                switch(current_mode){
+                    case "ghost":
+                        setMeInformation();
+                        setAge();
+                        break;
+                    case "fox":
+                        break;
+                    case "tiger":
+                        break;
+                    default:
+                        break;
                 }
                 break;
             default:
@@ -72,6 +80,12 @@ function scrollOut(){
     switch(current_mode){
         case "ghost":
             resetAge();
+            break;
+        case "fox":
+            resetSkill();
+            break;
+        case "tiger":
+            resetSkill();
             break;
         default:
             break;
