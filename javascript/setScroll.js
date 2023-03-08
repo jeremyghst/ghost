@@ -7,7 +7,6 @@ function setScroll(){
     const header = document.getElementById('header');
     const hero = document.getElementById('hero');
     
-    console.log(window.pageYOffset)
     if(window.pageYOffset > 90){
         if(!hero.classList.contains('min')){
             hero.classList.add('min');
