@@ -121,7 +121,7 @@
             border: none;
             opacity: 0;
 
-            // @include position(relative, auto, auto, auto, -100vw);
+            @include position(relative, auto, auto, auto, -100vw);
             transition: left $transition_scroll, opacity $transition_scroll, background-color $transition_backgroundColor;
 
             img{
@@ -142,7 +142,7 @@
 
             &.visible{
                 opacity: 1;
-                // @include position(relative, auto, auto, auto, 0);
+                @include position(relative, auto, auto, auto, 0);
                 transition: left $transition_scroll, opacity $transition_scroll;
             }
         }
@@ -223,11 +223,11 @@
                 justify-self: center;
                 
                 .social{
-                    // @include position(relative, auto, -100vw, auto, auto);
+                    @include position(relative, auto, -100vw, auto, auto);
                     transition: right $transition_scroll, opacity $transition_scroll, background-color $transition_backgroundColor;
 
                     &.visible{
-                        // @include position(relative, auto, 0, auto, auto);
+                        @include position(relative, auto, 0, auto, auto);
                         transition: right $transition_scroll, opacity $transition_scroll;
                     }
                 }
