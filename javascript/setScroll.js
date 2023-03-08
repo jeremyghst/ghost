@@ -32,7 +32,9 @@ function setScroll(){
         const bottom = element.getBoundingClientRect().bottom;
 
         if(
-            top < window.innerHeight && bottom >= 0
+            window.pageYOffset > 90 &&
+            top < window.innerHeight && 
+            bottom >= 0
         ){
             scrollIn(element);
         }

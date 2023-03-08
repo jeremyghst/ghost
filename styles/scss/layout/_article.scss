@@ -69,6 +69,7 @@
             gap: calc($base_margin / 5);
             opacity: 0;
             transition: opacity $transition_scroll;
+            width: 100%;
 
             h3{
                 color: $ghost_color_1;

@@ -14,6 +14,7 @@ const elementObj = {
 
     balance: document.getElementById('balance'),
     information: document.getElementById('information'),
+    information_heading: Array.from(document.getElementsByClassName('information_heading')),
 
 
     footer_tag_gh: document.getElementById('footer_tag_gh'),
@@ -22,7 +23,6 @@ const elementObj = {
     copyright: document.getElementById('copyright'),
     copyrightYear: document.getElementById('copyrightYear'),
 
-    information_heading: Array.from(document.getElementsByClassName('information_heading')),
 
     bucket: document.getElementById('bucket'),
 
@@ -37,7 +37,8 @@ const modeObj = [
         color_3: '#11122C',
         logo: 'ghost',
         title: '',
-        greeting: 'Boooooo!'
+        greeting: 'Boooooo!',
+        information: component_me
     },
     {
         id: 'fox',
@@ -46,7 +47,9 @@ const modeObj = [
         color_3: '#120802',
         logo: 'fox',
         title: 'Fox mode -',
-        greeting: 'Wooooof!'
+        greeting: 'Wooooof!',
+        information: component_web
+
     },
     {
         id: 'tiger',
@@ -92,8 +95,8 @@ function updateMode(e){
 
     elementObj.balance.src = `./assets/logo/balance/${target_mode.logo}.svg`;
 
+    elementObj.information.innerHTML = target_mode.information;
     elementObj.information.style.backgroundColor = target_mode.color_2;
-
 
     elementObj.footer_tag_gh.style.fill = target_mode.color_3;
     elementObj.footer_tag_st.style.fill = target_mode.color_3;
@@ -102,6 +105,7 @@ function updateMode(e){
     elementObj.copyrightYear.style.color = target_mode.color_2;
 
     elementObj.information_heading.forEach(heading => {
+        console.log(heading)
         heading.style.color = target_mode.color_1;
     })
 
@@ -111,7 +115,6 @@ function updateMode(e){
         social.style.backgroundColor = target_mode.color_2;
     })
 }
-
 
 function resetAnimation(){
     scrollUp();
