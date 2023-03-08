@@ -106,7 +106,6 @@ function updateMode(e){
 
     const information_heading = Array.from(document.getElementsByClassName('information_heading'));
     information_heading.forEach(heading => {
-        console.log(heading)
         heading.style.color = target_mode.color_1;
     })
 
