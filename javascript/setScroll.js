@@ -48,7 +48,11 @@ function scrollIn(element){
         switch(element.dataset.function){
             case "information":
                 fadeInInformation();
-                setAge();
+
+                if(current_mode === 'ghost'){
+                    setMeInformation();
+                    setAge();
+                }
                 break;
             default:
                 break;
@@ -63,6 +67,13 @@ function scrollOut(){
         element.classList.remove('visible');
     })
 
-    resetAge();
     fadeOutInformation();
+
+    switch(current_mode){
+        case "ghost":
+            resetAge();
+            break;
+        default:
+            break;
+    }
 }

@@ -1,9 +1,4 @@
 "use strict"
-
-const year_container = document.getElementById('year');
-const month_container = document.getElementById('month');
-const day_container = document.getElementById('day');
-
 const timerAge = 2000; 
 
 function getYears(){
@@ -37,6 +32,10 @@ function getDays(){
 }
 
 function setAge(){
+    const year_container = document.getElementById('year');
+    const month_container = document.getElementById('month');
+    const day_container = document.getElementById('day');
+
     const getYear = getYears();
     const getMonth = getMonths();
     const getDay = getDays();
@@ -94,6 +93,10 @@ function setAge(){
 }
 
 function resetAge(){
+    const year_container = document.getElementById('year');
+    const month_container = document.getElementById('month');
+    const day_container = document.getElementById('day');
+
     year_container.innerText = "0 years";
     month_container.innerText = "0 months";
     day_container.innerText = "0 days";

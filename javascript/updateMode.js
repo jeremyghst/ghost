@@ -72,7 +72,8 @@ function updateMode(e){
 
     const target = e.target.closest('.updateBtn');
     const mode = target.dataset.mode;
-
+    current_mode = mode; 
+    
     const target_mode = modeObj.find(obj => obj.id === mode);
 
     elementObj.html.style.backgroundColor = target_mode.color_1;

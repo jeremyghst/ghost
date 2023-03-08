@@ -1,10 +1,11 @@
 "use strict"
 
+let current_mode = 'ghost';
+
 window.onload = (event) => {
     scrollUp();
     setNav();
     setHero();
-    setInformation();
     
     setTimeout(() => {
         document.body.classList.remove('locked');
