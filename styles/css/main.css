@@ -150,6 +150,7 @@ li {
   justify-self: flex-end;
   width: 250px;
   max-width: 60%;
+  max-height: 200px;
   transition: right 1s;
   margin-top: 150px;
 }

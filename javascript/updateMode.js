@@ -58,7 +58,8 @@ const modeObj = [
         color_3: '#08090C',
         logo: 'tiger',
         title: 'Tiger mode -',
-        greeting: 'Prrrrrr!'
+        greeting: 'Prrrrrr!',
+        information: component_om
     }
 ]
 
