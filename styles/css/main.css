@@ -52,6 +52,7 @@ html {
   width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 html body {
   width: 100%;
@@ -526,7 +527,6 @@ li {
   width: 800px;
   max-width: 90%;
   aspect-ratio: 2/1;
-  max-height: 50%;
   margin-bottom: 160px;
 }
 #hero #hero_container .tag_part {
