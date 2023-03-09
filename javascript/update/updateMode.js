@@ -52,8 +52,8 @@ const modeObj = [
     },
     {
         id: 'tiger',
-        color_1: '#D98189',
-        color_2: '#BC3843',
+        color_1: '#CB525C',
+        color_2: '#8D2A32',
         color_3: '#08090C',
         logo: 'tiger',
         title: 'Tiger mode -',
