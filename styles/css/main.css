@@ -526,6 +526,7 @@ li {
   width: 800px;
   max-width: 90%;
   aspect-ratio: 2/1;
+  max-height: 50%;
   margin-bottom: 160px;
 }
 #hero #hero_container .tag_part {
@@ -646,7 +647,7 @@ li {
   background-color: #2C3963;
 }
 #header_nav ul#nav_switch li:nth-child(3) .updateBtn {
-  background-color: #761B19;
+  background-color: #6E2127;
 }
 #header_nav ul#nav_switch.visible {
   position: relative;

@@ -11,6 +11,7 @@
         width: $hero_width;
         max-width: 90%;
         aspect-ratio: 2/1;
+        max-height: 50%;
         margin-bottom: calc($height_header_nav * 2);
 
         .tag_part{
