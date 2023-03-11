@@ -2,11 +2,11 @@
     @include position(relative, auto, -100vw, auto, auto);
     grid-area: bucket;
     justify-self: flex-end;
-    width: 250px;
     max-width: 60%;
-    max-height: 200px;
+    height: 200px;
     transition: right $transition_scroll;
     margin-top: $base_big;
+    animation: open 5s linear infinite;
 
     &.visible{
         @include position(relative, auto, 0, auto, auto);

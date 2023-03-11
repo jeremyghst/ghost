@@ -42,6 +42,20 @@
     transform: rotate(360deg);
   }
 }
+@keyframes open {
+  0% {
+    opacity: 0.5;
+    scale: 1;
+  }
+  50% {
+    opacity: 1;
+    scale: 1.1;
+  }
+  100% {
+    opacity: 0.5;
+    scale: 1;
+  }
+}
 html {
   transition: background-color 2s, color 2s;
   background-color: #3BA99C;
@@ -149,11 +163,11 @@ li {
   left: auto;
   grid-area: bucket;
   justify-self: flex-end;
-  width: 250px;
   max-width: 60%;
-  max-height: 200px;
+  height: 200px;
   transition: right 1s;
   margin-top: 150px;
+  animation: open 5s linear infinite;
 }
 #bucket.visible {
   position: relative;
