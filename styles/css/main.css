@@ -526,7 +526,6 @@ li {
   left: auto;
   width: 800px;
   max-width: 90%;
-  min-height: 0;
   aspect-ratio: 2/1;
   margin-bottom: 160px;
 }
@@ -535,6 +534,7 @@ li {
   opacity: 0;
   fill: #11122C;
   transition: fill 1s ease-out;
+  min-height: 0;
 }
 #hero #hero_container .tag_part#tag_gh {
   position: absolute;
@@ -581,6 +581,7 @@ li {
   z-index: 2;
   opacity: 0;
   transform: rotate(-360deg);
+  min-height: 0;
 }
 #hero #hero_container #tag_logo.visible {
   opacity: 1;
