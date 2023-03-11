@@ -14,11 +14,11 @@
         margin-bottom: calc($height_header_nav * 2);
 
         .tag_part{
+            min-height: 0;
             height: 75%;
             opacity: 0;
             fill: $ghost_color_3;
             transition: fill $transition_hero;
-            min-height: 0;
 
             &#tag_gh{
                 @include position(absolute, -100vh, auto, auto, -100vw);
@@ -47,11 +47,11 @@
 
         #tag_logo{
             @include position(relative, auto, auto, auto, auto);
+            min-height: 0;
             height: 100%;
             z-index: 2;
             opacity: 0;
             transform: rotate(-360deg);
-            min-height: 0;
 
             &.visible{
                 opacity: 1;

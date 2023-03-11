@@ -530,11 +530,11 @@ li {
   margin-bottom: 160px;
 }
 #hero #hero_container .tag_part {
+  min-height: 0;
   height: 75%;
   opacity: 0;
   fill: #11122C;
   transition: fill 1s ease-out;
-  min-height: 0;
 }
 #hero #hero_container .tag_part#tag_gh {
   position: absolute;
@@ -577,11 +577,11 @@ li {
   right: auto;
   bottom: auto;
   left: auto;
+  min-height: 0;
   height: 100%;
   z-index: 2;
   opacity: 0;
   transform: rotate(-360deg);
-  min-height: 0;
 }
 #hero #hero_container #tag_logo.visible {
   opacity: 1;
