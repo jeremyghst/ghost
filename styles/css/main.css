@@ -665,7 +665,7 @@ li {
   background-color: #2C3963;
 }
 #header_nav ul#nav_switch li:nth-child(3) .updateBtn {
-  background-color: #8D2A32;
+  background-color: #602F36;
 }
 #header_nav ul#nav_switch.visible {
   position: relative;
