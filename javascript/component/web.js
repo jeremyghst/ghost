@@ -62,9 +62,15 @@ const component_web = `
     <div class="flex_col information_fadeIn">
     <h3 class="information_heading">design</h3>
     <div class="flex_skill">
-        <h4>logo's:</h4>
+        <h4>logos:</h4>
         <div class="progressbar">
             <div class="progress" data-skill="logo"></div>
+        </div>
+    </div>
+    <div class="flex_skill">
+        <h4>websites:</h4>
+        <div class="progressbar">
+            <div class="progress" data-skill="website"></div>
         </div>
     </div>
 </div>

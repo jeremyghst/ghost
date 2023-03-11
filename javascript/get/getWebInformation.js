@@ -10,5 +10,6 @@ const web_information =
     mysql: 70,
     php: 60,
     laravel: 70, 
-    logo: 75,
+    logo: 50,
+    website: 40
 }
