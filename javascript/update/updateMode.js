@@ -26,6 +26,8 @@ const elementObj = {
 
     bucket: document.getElementById('bucket'),
 
+    slogan2: document.getElementById('socials_slogan'),
+
     social: Array.from(document.getElementsByClassName('social'))
 }
 
@@ -39,7 +41,8 @@ const modeObj = [
         title: '',
         greeting: 'Boooooo!',
         slogan: 'balance is key',
-        information: component_me
+        information: component_me,
+        slogan2: 'share your thoughts'
     },
     {
         id: 'fox',
@@ -50,7 +53,8 @@ const modeObj = [
         title: 'Fox mode -',
         greeting: 'Wooooof!',
         slogan: 'balance your spirit',
-        information: component_web
+        information: component_web,
+        slogan2: 'open your mind'
 
     },
     {
@@ -62,7 +66,8 @@ const modeObj = [
         title: 'Tiger mode -',
         greeting: 'Prrrrrr!',
         slogan: 'balance your soul',
-        information: component_om
+        information: component_om,
+        slogan2: 'open your heart'
     }
 ]
 
@@ -110,6 +115,8 @@ function setMode(mode){
 
     elementObj.information.innerHTML = target_mode.information;
     elementObj.information.style.backgroundColor = target_mode.color_2;
+
+    elementObj.slogan2.innerText = target_mode.slogan2;
 
     elementObj.footer_tag_gh.style.fill = target_mode.color_3;
     elementObj.footer_tag_st.style.fill = target_mode.color_3;
