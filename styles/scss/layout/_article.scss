@@ -113,6 +113,7 @@
 
         
         .social{
+            display: block;
             background-color: $ghost_color_2;
             height: $base_big;
             width: $base_big;
@@ -132,7 +133,7 @@
                 transition: opacity $transition_hover;
             }
 
-            &:hover{                    
+            &:not(div):hover{                    
                 animation: shake 0.8s infinite;
 
                 img{
