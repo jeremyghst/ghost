@@ -526,6 +526,7 @@ li {
   left: auto;
   width: 800px;
   max-width: 90%;
+  min-height: 0;
   aspect-ratio: 2/1;
   margin-bottom: 160px;
 }
@@ -647,7 +648,7 @@ li {
   background-color: #2C3963;
 }
 #header_nav ul#nav_switch li:nth-child(3) .updateBtn {
-  background-color: #6E2127;
+  background-color: #8D2A32;
 }
 #header_nav ul#nav_switch.visible {
   position: relative;
