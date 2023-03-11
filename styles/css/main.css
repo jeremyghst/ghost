@@ -524,8 +524,10 @@ li {
   right: auto;
   bottom: auto;
   left: auto;
-  width: 800px;
-  max-width: 90%;
+  height: 400px;
+  max-height: 45vw;
+  width: 90%;
+  max-width: 800px;
   aspect-ratio: 2/1;
   margin-bottom: 160px;
 }

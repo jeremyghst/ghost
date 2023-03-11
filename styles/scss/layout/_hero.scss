@@ -7,9 +7,10 @@
     #hero_container{
         @include flex(row, center, center);
         @include position(relative, auto, auto, auto, auto);
-
-        width: $hero_width;
-        max-width: 90%;
+        height: calc($hero_width / 2);
+        max-height: 45vw;
+        width: 90%;
+        max-width: $hero_width;
         aspect-ratio: 2/1;
         margin-bottom: calc($height_header_nav * 2);
 
