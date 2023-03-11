@@ -11,7 +11,7 @@
     
 
         li{
-            button{
+            button, a{
                 border: none;
                 &:hover{                    
                     animation: shake 0.8s infinite;
@@ -57,7 +57,8 @@
             @include position(relative, auto, auto, auto, 100px);
 
             li{
-                button{
+                a{
+                    display: block;
                     background-color: transparent;
                     height: 30px;
 

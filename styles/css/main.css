@@ -620,10 +620,10 @@ li {
   align-items: flex-start;
   gap: 10px;
 }
-#header_nav ul li button {
+#header_nav ul li button, #header_nav ul li a {
   border: none;
 }
-#header_nav ul li button:hover {
+#header_nav ul li button:hover, #header_nav ul li a:hover {
   animation: shake 0.8s infinite;
 }
 #header_nav ul.visible {
@@ -665,16 +665,17 @@ li {
   bottom: auto;
   left: 100px;
 }
-#header_nav ul#nav_social li button {
+#header_nav ul#nav_social li a {
+  display: block;
   background-color: transparent;
   height: 30px;
 }
-#header_nav ul#nav_social li button img {
+#header_nav ul#nav_social li a img {
   height: 100%;
   opacity: 0.6;
   transition: opacity 1s;
 }
-#header_nav ul#nav_social li button:hover img {
+#header_nav ul#nav_social li a:hover img {
   opacity: 1;
   transition: opacity 1s;
 }
