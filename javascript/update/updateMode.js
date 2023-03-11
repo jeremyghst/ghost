@@ -10,6 +10,7 @@ const elementObj = {
     tag_st: document.getElementById('tag_st'),
 
     greeting: document.getElementById('greeting'),
+    intro_slogan: document.getElementById('intro_slogan'),
     slogan: Array.from(document.getElementsByClassName('slogan')),
 
     balance: document.getElementById('balance'),
@@ -37,6 +38,7 @@ const modeObj = [
         logo: 'ghost',
         title: '',
         greeting: 'Boooooo!',
+        slogan: 'balance is key',
         information: component_me
     },
     {
@@ -47,6 +49,7 @@ const modeObj = [
         logo: 'fox',
         title: 'Fox mode -',
         greeting: 'Wooooof!',
+        slogan: 'balance your spirit',
         information: component_web
 
     },
@@ -58,6 +61,7 @@ const modeObj = [
         logo: 'tiger',
         title: 'Tiger mode -',
         greeting: 'Prrrrrr!',
+        slogan: 'balance your soul',
         information: component_om
     }
 ]
@@ -95,6 +99,8 @@ function setMode(mode){
 
     elementObj.greeting.innerText = target_mode.greeting;
     elementObj.greeting.style.color = target_mode.color_2;
+
+    elementObj.intro_slogan.innerText = target_mode.slogan;
 
     elementObj.slogan.forEach(slogan => {
         slogan.style.color = target_mode.color_2;
