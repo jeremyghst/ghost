@@ -330,7 +330,7 @@ li {
   opacity: 1;
   transition: opacity 2s;
 }
-#main_article #information .flex_col a:hover {
+#main_article #information .flex_col a:is(:hover, :focus, :active) {
   animation: shake 0.8s infinite;
 }
 #main_article #information .flex_col.visible {
@@ -379,10 +379,10 @@ li {
   opacity: 0.6;
   transition: opacity 1s;
 }
-#main_article #social_container .social:hover {
+#main_article #social_container .social:is(:hover, :focus, :active) {
   animation: shake 0.8s infinite;
 }
-#main_article #social_container .social:hover img {
+#main_article #social_container .social:is(:hover, :focus, :active) img {
   opacity: 1;
   transition: opacity 1s;
 }
@@ -494,7 +494,7 @@ li {
   opacity: 0.6;
   transition: opacity 1s;
 }
-#footer #footer_tag:hover {
+#footer #footer_tag:is(:hover, :focus, :active) {
   animation: shake 0.8s infinite;
   opacity: 1;
   transition: opacity 1s;
@@ -614,7 +614,7 @@ li {
   transform: rotate(0deg);
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
-#hero #hero_container #tag_logo.visible:hover ~ svg {
+#hero #hero_container #tag_logo.visible:is(:hover, :focus, :active) ~ svg {
   opacity: 1;
 }
 #hero.min {
@@ -649,7 +649,7 @@ li {
 #header_nav ul li button, #header_nav ul li a {
   border: none;
 }
-#header_nav ul li button:hover, #header_nav ul li a:hover {
+#header_nav ul li button:is(:hover, :focus, :active), #header_nav ul li a:is(:hover, :focus, :active) {
   animation: shake 0.8s infinite;
 }
 #header_nav ul.visible {
@@ -705,7 +705,7 @@ li {
   opacity: 0.6;
   transition: opacity 1s;
 }
-#header_nav ul#nav_social li a:hover img {
+#header_nav ul#nav_social li a:is(:hover, :focus, :active) img {
   opacity: 1;
   transition: opacity 1s;
 }

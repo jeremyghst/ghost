@@ -11,7 +11,7 @@
         opacity: 0.6;
         transition: opacity $transition_hover;
 
-        &:hover{
+        &:is(:hover, :focus, :active){
             animation: shake 0.8s infinite;
             opacity: 1;
             transition: opacity $transition_hover;

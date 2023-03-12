@@ -59,7 +59,7 @@
                 transform: rotate(0deg);
                 transition: transform $transition_hero, opacity $transition_hero;
 
-                &:hover{
+                &:is(:hover, :focus, :active){
                     & ~ svg{
                         opacity: 1;
                     }

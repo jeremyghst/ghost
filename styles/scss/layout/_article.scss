@@ -90,7 +90,7 @@
                 }
             }
 
-            a:hover{
+            a:is(:hover, :focus, :active){
                 animation: shake 0.8s infinite;
             }
 
@@ -134,7 +134,7 @@
                 transition: opacity $transition_hover;
             }
 
-            &:hover{                    
+            &:is(:hover, :focus, :active){                    
                 animation: shake 0.8s infinite;
 
                 img{
