@@ -6,7 +6,7 @@
     height: 200px;
     transition: right $transition_scroll;
     margin-top: $base_big;
-    animation: open 5s linear infinite;
+    animation: open 10s linear infinite;
 
     &.visible{
         @include position(relative, auto, 0, auto, auto);

@@ -44,15 +44,21 @@
 }
 @keyframes open {
   0% {
-    opacity: 0.5;
     scale: 1;
+    transform: rotate(-15deg);
+  }
+  25% {
+    transform: rotate(15deg);
   }
   50% {
-    opacity: 1;
     scale: 1.1;
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
   }
   100% {
-    opacity: 0.5;
+    transform: rotate(-15deg);
     scale: 1;
   }
 }
@@ -167,7 +173,7 @@ li {
   height: 200px;
   transition: right 1s;
   margin-top: 150px;
-  animation: open 5s linear infinite;
+  animation: open 10s linear infinite;
 }
 #bucket.visible {
   position: relative;
