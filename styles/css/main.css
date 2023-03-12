@@ -686,10 +686,14 @@ li {
   right: auto;
   bottom: auto;
   left: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
 }
 #header_nav ul#nav_social li a {
   display: block;
-  background-color: transparent;
   height: 30px;
 }
 #header_nav ul#nav_social li a img {

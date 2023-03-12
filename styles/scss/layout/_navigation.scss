@@ -55,11 +55,12 @@
 
         &#nav_social{
             @include position(relative, auto, auto, auto, 100px);
+            @include flex(row, flex-start, flex-start);
+            gap: $base_gap;
 
             li{
                 a{
                     display: block;
-                    background-color: transparent;
                     height: 30px;
 
                     img{
