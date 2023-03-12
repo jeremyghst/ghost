@@ -1,3 +1,5 @@
+"use strict"
+
 const component_web = `
 <h2 class="information_heading">
     web.

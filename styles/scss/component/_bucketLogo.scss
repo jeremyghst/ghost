@@ -1,12 +1,11 @@
-#bucket{
+#bucket_logo{
     @include position(relative, auto, -100vw, auto, auto);
     grid-area: bucket;
-    justify-self: flex-end;
+    justify-self: center;
     max-width: 60%;
     height: 200px;
     transition: right $transition_scroll;
     margin-top: $base_big;
-    animation: open 10s linear infinite;
 
     &.visible{
         @include position(relative, auto, 0, auto, auto);
@@ -17,7 +16,6 @@
         &{
             margin-top: 0;
             align-self: center;
-            justify-self: center;
             @include position(relative, auto, auto, auto, -100vw);
             transition: left $transition_scroll;
 

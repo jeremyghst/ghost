@@ -6,3 +6,18 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes rock {
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(36deg);
+    }
+    66%{
+        transform: rotate(-36deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

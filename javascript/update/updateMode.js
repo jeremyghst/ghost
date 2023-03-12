@@ -24,7 +24,7 @@ const elementObj = {
     copyrightYear: document.getElementById('copyrightYear'),
 
 
-    bucket: document.getElementById('bucket'),
+    bucket: document.getElementById('bucket_logo'),
 
     slogan2: document.getElementById('socials_slogan'),
 

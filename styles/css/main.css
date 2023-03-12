@@ -42,24 +42,18 @@
     transform: rotate(360deg);
   }
 }
-@keyframes open {
+@keyframes rock {
   0% {
-    scale: 0.9;
-    transform: rotate(-15deg);
+    transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(15deg);
+  33% {
+    transform: rotate(36deg);
   }
-  50% {
-    scale: 1.1;
-    transform: rotate(-15deg);
-  }
-  75% {
-    transform: rotate(15deg);
+  66% {
+    transform: rotate(-36deg);
   }
   100% {
-    transform: rotate(-15deg);
-    scale: 0.9;
+    transform: rotate(0deg);
   }
 }
 html {
@@ -161,21 +155,20 @@ li {
   }
 }
 
-#bucket {
+#bucket_logo {
   position: relative;
   top: auto;
   right: -100vw;
   bottom: auto;
   left: auto;
   grid-area: bucket;
-  justify-self: flex-end;
+  justify-self: center;
   max-width: 60%;
   height: 200px;
   transition: right 1s;
   margin-top: 150px;
-  animation: open 10s linear infinite;
 }
-#bucket.visible {
+#bucket_logo.visible {
   position: relative;
   top: auto;
   right: 0;
@@ -184,10 +177,9 @@ li {
   transition: right 1s;
 }
 @media all and (max-width: 1049px) {
-  #bucket {
+  #bucket_logo {
     margin-top: 0;
     align-self: center;
-    justify-self: center;
     position: relative;
     top: auto;
     right: auto;
@@ -195,7 +187,7 @@ li {
     left: -100vw;
     transition: left 1s;
   }
-  #bucket.visible {
+  #bucket_logo.visible {
     position: relative;
     top: auto;
     right: auto;
@@ -205,7 +197,7 @@ li {
   }
 }
 @media all and (max-width: 799px) {
-  #bucket {
+  #bucket_logo {
     margin: 150px 0;
   }
 }
@@ -547,6 +539,7 @@ li {
 }
 #footer p:first-child {
   text-align: end;
+  font-size: 1.2rem;
 }
 #footer p.visible {
   opacity: 1;
