@@ -68,7 +68,7 @@ const modeObj = [
         slogan: 'balance your soul',
         information: component_om,
         slogan2: 'open your heart'
-    }
+    }    
 ]
 
 const updateBtn = Array.from(document.getElementsByClassName('updateBtn'));

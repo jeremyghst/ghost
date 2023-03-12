@@ -8,19 +8,28 @@
 
     #footer_tag{
         @include flex(row, center, center);
-        opacity: 0.6;
-        transition: opacity $transition_hover;
+        @include position(relative, auto, auto, 50px, auto);
+        transition: opacity $transition_scroll, bottom $transition_scroll;
+        opacity: 0;
 
-        &:is(:hover, :focus, :active){
+        &:hover{                    
             animation: shake 0.8s infinite;
-            opacity: 1;
-            transition: opacity $transition_hover;
+        }
+        &:active{
+            animation: none;
         }
 
         svg{
             height: 25px;
             fill: $ghost_color_3;
             transition: fill $transition_hero;
+        }
+
+
+        &.visible{
+            @include position(relative, auto, auto, 0, auto);
+            transition: opacity $transition_scroll, bottom $transition_scroll;
+            opacity: 1;
         }
     }
 

@@ -330,8 +330,11 @@ li {
   opacity: 1;
   transition: opacity 2s;
 }
-#main_article #information .flex_col a:is(:hover, :focus, :active) {
+#main_article #information .flex_col a:hover {
   animation: shake 0.8s infinite;
+}
+#main_article #information .flex_col a:active {
+  animation: none;
 }
 #main_article #information .flex_col.visible {
   opacity: 1;
@@ -379,11 +382,18 @@ li {
   opacity: 0.6;
   transition: opacity 1s;
 }
-#main_article #social_container .social:is(:hover, :focus, :active) {
+#main_article #social_container .social:hover {
   animation: shake 0.8s infinite;
 }
-#main_article #social_container .social:is(:hover, :focus, :active) img {
+#main_article #social_container .social:hover img {
   opacity: 1;
+  transition: opacity 1s;
+}
+#main_article #social_container .social:active {
+  animation: none;
+}
+#main_article #social_container .social:active img {
+  opacity: 0;
   transition: opacity 1s;
 }
 #main_article #social_container .social.visible {
@@ -491,18 +501,33 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  opacity: 0.6;
-  transition: opacity 1s;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: 50px;
+  left: auto;
+  transition: opacity 1s, bottom 1s;
+  opacity: 0;
 }
-#footer #footer_tag:is(:hover, :focus, :active) {
+#footer #footer_tag:hover {
   animation: shake 0.8s infinite;
-  opacity: 1;
-  transition: opacity 1s;
+}
+#footer #footer_tag:active {
+  animation: none;
 }
 #footer #footer_tag svg {
   height: 25px;
   fill: #11122C;
   transition: fill 1s ease-out;
+}
+#footer #footer_tag.visible {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  transition: opacity 1s, bottom 1s;
+  opacity: 1;
 }
 #footer p {
   width: 100%;
@@ -595,7 +620,7 @@ li {
   transition: right 1s ease-out, bottom 1s ease-out, opacity 1s ease-out;
 }
 #hero #hero_container .tag_part.visible {
-  opacity: 0.6;
+  opacity: 1;
 }
 #hero #hero_container #tag_logo {
   position: relative;
@@ -613,9 +638,6 @@ li {
   opacity: 1;
   transform: rotate(0deg);
   transition: transform 1s ease-out, opacity 1s ease-out;
-}
-#hero #hero_container #tag_logo.visible:is(:hover, :focus, :active) ~ svg {
-  opacity: 1;
 }
 #hero.min {
   min-height: 0;
@@ -649,8 +671,11 @@ li {
 #header_nav ul li button, #header_nav ul li a {
   border: none;
 }
-#header_nav ul li button:is(:hover, :focus, :active), #header_nav ul li a:is(:hover, :focus, :active) {
+#header_nav ul li button:hover, #header_nav ul li a:hover {
   animation: shake 0.8s infinite;
+}
+#header_nav ul li button:active, #header_nav ul li a:active {
+  animation: none;
 }
 #header_nav ul.visible {
   transition: 1s ease-out;
@@ -705,8 +730,12 @@ li {
   opacity: 0.6;
   transition: opacity 1s;
 }
-#header_nav ul#nav_social li a:is(:hover, :focus, :active) img {
+#header_nav ul#nav_social li a:hover img {
   opacity: 1;
+  transition: opacity 1s;
+}
+#header_nav ul#nav_social li a:active img {
+  opacity: 0;
   transition: opacity 1s;
 }
 #header_nav ul#nav_social.visible {

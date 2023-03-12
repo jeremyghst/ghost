@@ -14,8 +14,11 @@
             button, a{
                 border: none;
 
-                &:is(:hover, :focus, :active){                    
+                &:hover{                    
                     animation: shake 0.8s infinite;
+                }
+                &:active{
+                    animation: none;
                 }
             }
         }
@@ -70,11 +73,18 @@
                         transition: opacity $transition_hover;
                     }
 
-                    &:is(:hover, :focus, :active){                    
+                    &:hover{                    
                         img{
                             opacity: 1;
                             transition: opacity $transition_hover;
-                        }
+                        }                    
+                    }
+        
+                    &:active{
+                        img{
+                            opacity: 0;
+                            transition: opacity $transition_hover;
+                        }            
                     }
                 }
             }
