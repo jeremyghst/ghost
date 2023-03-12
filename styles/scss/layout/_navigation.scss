@@ -55,7 +55,7 @@
         }
 
         &#nav_social{
-            @include position(relative, auto, auto, auto, 250px);
+            @include position(relative, auto, auto, auto, 400px);
             @include flex(row, flex-start, flex-start);
             gap: $base_gap;
 

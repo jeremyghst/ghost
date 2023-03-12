@@ -689,7 +689,7 @@ li {
   top: auto;
   right: auto;
   bottom: auto;
-  left: 100px;
+  left: 400px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
