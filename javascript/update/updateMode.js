@@ -42,7 +42,7 @@ const modeObj = [
         greeting: 'Boooooo!',
         slogan: 'balance is key',
         information: component_me,
-        slogan2: 'heart versus mind'
+        slogan2: 'communication is peace'
     },
     {
         id: 'fox',
