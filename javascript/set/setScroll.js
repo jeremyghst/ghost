@@ -54,9 +54,9 @@ function scrollIn(element){
                         setMeInformation();
                         setAge();
                         break;
-                    case "fox":
+                    case "anjing":
                         break;
-                    case "tiger":
+                    case "kucing":
                         break;
                     default:
                         break;
