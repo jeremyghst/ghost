@@ -133,7 +133,7 @@
                 transition: opacity $transition_hover;
             }
 
-            &:not(div):hover{                    
+            &:hover{                    
                 animation: shake 0.8s infinite;
 
                 img{

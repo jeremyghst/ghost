@@ -375,10 +375,10 @@ li {
   opacity: 0.6;
   transition: opacity 1s;
 }
-#main_article #social_container .social:not(div):hover {
+#main_article #social_container .social:hover {
   animation: shake 0.8s infinite;
 }
-#main_article #social_container .social:not(div):hover img {
+#main_article #social_container .social:hover img {
   opacity: 1;
   transition: opacity 1s;
 }
