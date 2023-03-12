@@ -162,11 +162,12 @@ li {
   bottom: auto;
   left: auto;
   grid-area: bucket;
-  justify-self: center;
+  justify-self: flex-end;
   max-width: 60%;
   height: 200px;
   transition: right 1s;
   margin-top: 150px;
+  animation: open 10s linear infinite;
 }
 #bucket_logo.visible {
   position: relative;
@@ -180,6 +181,7 @@ li {
   #bucket_logo {
     margin-top: 0;
     align-self: center;
+    justify-self: center;
     position: relative;
     top: auto;
     right: auto;
