@@ -700,6 +700,14 @@ li {
   height: 20px;
   width: 20px;
   border-radius: 50%;
+  opacity: 1;
+  transition: opacity 1s;
+}
+#header_nav ul#nav_switch li .updateBtn:hover {
+  opacity: 0.6;
+}
+#header_nav ul#nav_switch li .updateBtn:active {
+  opacity: 1;
 }
 #header_nav ul#nav_switch li:nth-child(1) .updateBtn {
   background-color: #256A62;

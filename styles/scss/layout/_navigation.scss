@@ -37,6 +37,15 @@
                     height: 20px;
                     width: 20px;
                     border-radius: 50%;
+                    opacity: 1;
+                    transition: opacity $transition_hover;
+
+                    &:hover{                    
+                        opacity: 0.6;
+                    }
+                    &:active{
+                        opacity: 1;
+                    }
                 }
     
                 &:nth-child(1) .updateBtn{
