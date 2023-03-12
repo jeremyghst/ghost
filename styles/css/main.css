@@ -367,6 +367,10 @@ li {
   right: auto;
   bottom: auto;
   left: -100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   transition: left 1s, opacity 1s, background-color 1s;
 }
 #main_article #social_container .social img {
