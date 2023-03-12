@@ -330,10 +330,16 @@ li {
   opacity: 1;
   transition: opacity 2s;
 }
+#main_article #information .flex_col a {
+  transition: opacity 1s;
+  opacity: 1;
+}
 #main_article #information .flex_col a:hover {
+  opacity: 0.6;
   animation: shake 0.8s infinite;
 }
 #main_article #information .flex_col a:active {
+  opacity: 1;
   animation: none;
 }
 #main_article #information .flex_col.visible {
@@ -509,10 +515,8 @@ li {
   transition: opacity 1s, bottom 1s;
   opacity: 0;
 }
-#footer #footer_tag:hover {
-  animation: shake 0.8s infinite;
-}
 #footer #footer_tag:active {
+  opacity: 1;
   animation: none;
 }
 #footer #footer_tag svg {
@@ -528,6 +532,10 @@ li {
   left: auto;
   transition: opacity 1s, bottom 1s;
   opacity: 1;
+}
+#footer #footer_tag:hover {
+  opacity: 0.6;
+  animation: shake 0.8s infinite;
 }
 #footer p {
   width: 100%;

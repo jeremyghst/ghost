@@ -12,10 +12,8 @@
         transition: opacity $transition_scroll, bottom $transition_scroll;
         opacity: 0;
 
-        &:hover{                    
-            animation: shake 0.8s infinite;
-        }
         &:active{
+            opacity: 1;
             animation: none;
         }
 
@@ -30,6 +28,11 @@
             @include position(relative, auto, auto, 0, auto);
             transition: opacity $transition_scroll, bottom $transition_scroll;
             opacity: 1;
+        }
+
+        &:hover{                    
+            opacity: 0.6;
+            animation: shake 0.8s infinite;
         }
     }
 
