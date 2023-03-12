@@ -658,7 +658,7 @@ li {
 #header_nav ul#nav_switch {
   position: relative;
   top: auto;
-  right: 100px;
+  right: 45px;
   bottom: auto;
   left: auto;
 }
@@ -687,9 +687,9 @@ li {
 #header_nav ul#nav_social {
   position: relative;
   top: auto;
-  right: auto;
+  right: -110px;
   bottom: auto;
-  left: 400px;
+  left: auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -712,7 +712,7 @@ li {
 #header_nav ul#nav_social.visible {
   position: relative;
   top: auto;
-  right: auto;
+  right: 0;
   bottom: auto;
-  left: 0;
+  left: auto;
 }/*# sourceMappingURL=main.css.map */

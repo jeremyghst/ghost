@@ -25,7 +25,7 @@
         }
 
         &#nav_switch{
-            @include position(relative, auto, 100px, auto, auto);
+            @include position(relative, auto, 45px, auto, auto);
     
     
             li{
@@ -55,7 +55,7 @@
         }
 
         &#nav_social{
-            @include position(relative, auto, auto, auto, 400px);
+            @include position(relative, auto, -110px, auto, auto);
             @include flex(row, flex-start, flex-start);
             gap: $base_gap;
 
@@ -80,7 +80,7 @@
             }
 
             &.visible{
-                @include position(relative, auto, auto, auto, 0);
+                @include position(relative, auto, 0, auto, auto);
             }
         }
     }
