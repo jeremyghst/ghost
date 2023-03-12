@@ -45,7 +45,7 @@ const modeObj = [
         slogan2: 'open yourself'
     },
     {
-        id: 'fox',
+        id: 'anjing',
         color_1: '#4B63AA',
         color_2: '#2C3963',
         color_3: '#120802',
@@ -58,7 +58,7 @@ const modeObj = [
 
     },
     {
-        id: 'tiger',
+        id: 'kucing',
         color_1: '#A4515C',
         color_2: '#602F36',
         color_3: '#090C09',
