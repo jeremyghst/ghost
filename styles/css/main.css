@@ -514,6 +514,8 @@ li {
   left: auto;
   transition: opacity 1s, bottom 1s;
   opacity: 0;
+  background-color: transparent;
+  border: none;
 }
 #footer #footer_tag:active {
   opacity: 1;

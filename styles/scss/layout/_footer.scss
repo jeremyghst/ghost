@@ -11,6 +11,8 @@
         @include position(relative, auto, auto, 50px, auto);
         transition: opacity $transition_scroll, bottom $transition_scroll;
         opacity: 0;
+        background-color: transparent;
+        border: none;
 
         &:active{
             opacity: 1;
