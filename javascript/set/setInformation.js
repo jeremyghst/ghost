@@ -10,10 +10,10 @@ function fadeInInformation(){
             switch(current_mode){
                 case "ghost":
                     break;
-                case "fox":
+                case "anjing":
                     setSkillInformation(web_information, information_fadeIn[i]);
                     break;
-                case "tiger":
+                case "kucing":
                     setSkillInformation(om_information, information_fadeIn[i]);
                 default:
                     break;
