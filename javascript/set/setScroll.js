@@ -81,10 +81,10 @@ function scrollOut(){
         case "ghost":
             resetAge();
             break;
-        case "fox":
+        case "anjing":
             resetSkill();
             break;
-        case "tiger":
+        case "kucing":
             resetSkill();
             break;
         default:
