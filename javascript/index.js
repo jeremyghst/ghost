@@ -14,6 +14,7 @@ window.onload = (event) => {
         }
     }
 
+    setCopyright();
     updateScroll();
     setNav();
     setHero();

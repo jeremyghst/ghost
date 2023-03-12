@@ -62,9 +62,6 @@ function scrollIn(element){
                         break;
                 }
                 break;
-            case "copyright":
-                fadeInCopyright();
-                break;
             default:
                 break;
         }
