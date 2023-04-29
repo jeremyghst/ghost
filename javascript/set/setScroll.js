@@ -48,22 +48,8 @@ function scrollIn(element){
         switch(element.dataset.function){
             case "information":
                 fadeInInformation();
-
-                switch(current_mode){
-                    case "ghost":
-                        setMeInformation();
-                        setAge();
-                        break;
-                    case "anjing":
-                        break;
-                    case "kucing":
-                        break;
-                    default:
-                        break;
-                }
-                break;
-            default:
-                break;
+                setMeInformation();
+                setAge();
         }
     }
 }
@@ -76,18 +62,5 @@ function scrollOut(){
     })
 
     fadeOutInformation();
-
-    switch(current_mode){
-        case "ghost":
-            resetAge();
-            break;
-        case "anjing":
-            resetSkill();
-            break;
-        case "kucing":
-            resetSkill();
-            break;
-        default:
-            break;
-    }
+    resetAge();
 }
